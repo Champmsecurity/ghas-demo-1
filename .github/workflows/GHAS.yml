@@ -108,3 +108,16 @@ jobs:
         with:
           name: all-alerts
           path: all-alerts.json
+
+      - name: Copy new all-alerts.json to repo
+        run: cp all-alerts.json ./all-alerts.json
+
+      - name: Commit and push all-alerts.json
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add all-alerts.json
+          git commit -m "Update all-alerts.json [skip ci]" || echo "No changes to commit"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
