@@ -79,6 +79,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: [code-scanning, secret-scanning, dependabot]
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
       - name: Download Code Scanning Alerts
         uses: actions/download-artifact@v4
         with:
