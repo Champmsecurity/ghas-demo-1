@@ -27,7 +27,7 @@ jobs:
         
       - name: Fetch Code Scanning Alerts
         run: |
-           curl -H "Authorization: token ${{secrets.MY_GITHUB_TOKEN}}" \
+           curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
                -H "Accept: application/vnd.github.v3+json" \
                https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts \
                -o code-scanning-alerts.json
@@ -48,7 +48,7 @@ jobs:
         
       - name: Fetch Secret Scanning Alerts
         run: |
-          curl -H "Authorization: token ${{secrets.MY_GITHUB_TOKEN}}" \
+          curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
                -H "Accept: application/vnd.github.v3+json" \
                https://api.github.com/repos/Champmsecurity/ghas-demo-1/secret-scanning/alerts \
                -o secret-scanning-alerts.json
@@ -65,7 +65,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Fetch Dependabot Alerts
         run: |
-          curl -H "Authorization: token ${{ secrets.MY_GITHUB_TOKEN }}" \
+          curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
                -H "Accept: application/vnd.github.v3+json" \
                https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts \
                -o dependabot-alerts.json
