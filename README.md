@@ -3,7 +3,9 @@
   <a href="#mega-prerequisites">Prerequisites</a> •  
   <a href="#books-resources">Resources</a>
 </p>
-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
+
+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
+
 > This bootcamp is designed to get you familiar with GitHub Advanced Security (GHAS) so that you can better understand how to use it in your own repositories.
 
 ## :mega: Prerequisites
