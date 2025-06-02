@@ -108,7 +108,10 @@ jobs:
         with:
           name: all-alerts
           path: all-alerts.json
-
+ 
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
       - name: Copy new all-alerts.json to repo
         run: cp all-alerts.json ./all-alerts.json
 
