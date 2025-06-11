@@ -65,10 +65,17 @@ jobs:
         uses: actions/checkout@v2
       - name: Fetch Dependabot Alerts
         run: |
-          curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
-               -H "Accept: application/vnd.github.v3+json" \
-               https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts?state=open \
-               -o dependabot-alerts.json
+          echo "[]" > dependabot-alerts.json
+          for page in {1..10}; do
+            resp=$(curl -s -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/Champmsecurity/ghas-demo-1/dependabot/alerts?per_page=100&page=$page")
+            count=$(echo "$resp" | jq length)
+            if [ "$count" -eq 0 ]; then break; fi
+            jq -s '.[0] + .[1]' dependabot-alerts.json <(echo "$resp") > tmp.json
+            mv tmp.json dependabot-alerts.json
+            if [ "$count" -lt 100 ]; then break; fi
+          done
       - name: Upload Dependabot Alerts
         uses: actions/upload-artifact@v4.6.2
         with:
