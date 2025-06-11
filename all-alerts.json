@@ -36,7 +36,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "96199c97178b17693d662451c15d436926967e3d",
+        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
         "message": {
           "text": "Unsafe deserialization depends on a user-provided value.\nUnsafe deserialization depends on a user-provided value."
         },
@@ -88,7 +88,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "96199c97178b17693d662451c15d436926967e3d",
+        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
         "message": {
           "text": "CSRF vulnerability due to protection being disabled."
         },
@@ -142,7 +142,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
+        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -196,7 +196,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
+        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -248,7 +248,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
+        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
         "message": {
           "text": "This query depends on a user-provided value.\nThis query depends on a user-provided value."
         },
@@ -301,7 +301,7 @@
         "environment": "{}",
         "category": ".github/workflows/GHAS.yml:code-scanning",
         "state": "open",
-        "commit_sha": "999242cc058c1953f429788f0f291a41139fd904",
+        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
         "message": {
           "text": "Cross-site scripting vulnerability due to user-provided value."
         },
@@ -318,67 +318,7 @@
       "dismissal_approved_by": null
     }
   ],
-  "secret_scanning": [
-    {
-      "number": 9,
-      "created_at": "2025-06-02T13:43:08Z",
-      "updated_at": "2025-06-02T15:42:23Z",
-      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/secret-scanning/alerts/9",
-      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/secret-scanning/9",
-      "locations_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/secret-scanning/alerts/9/locations",
-      "state": "open",
-      "secret_type": "github_personal_access_token",
-      "secret_type_display_name": "GitHub Personal Access Token",
-      "validity": "unknown",
-      "multi_repo": false,
-      "is_base64_encoded": false,
-      "secret": "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",
-      "first_location_detected": {
-        "path": "README.md",
-        "start_line": 7,
-        "end_line": 7,
-        "start_column": 1,
-        "end_column": 41,
-        "blob_sha": "835c21470938a0ffbca230d1f879dc8cb2cfb828",
-        "blob_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/git/blobs/835c21470938a0ffbca230d1f879dc8cb2cfb828",
-        "commit_sha": "ed0002b1040037c1a681f2ab9b8374dcf148c42c",
-        "commit_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/git/commits/ed0002b1040037c1a681f2ab9b8374dcf148c42c"
-      },
-      "has_more_locations": true,
-      "publicly_leaked": true,
-      "resolution": null,
-      "resolved_by": null,
-      "resolved_at": null,
-      "resolution_comment": null,
-      "push_protection_bypassed": true,
-      "push_protection_bypassed_by": {
-        "login": "Sec-champ",
-        "id": 203533934,
-        "node_id": "U_kgDODCGubg",
-        "avatar_url": "https://avatars.githubusercontent.com/u/203533934?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Sec-champ",
-        "html_url": "https://github.com/Sec-champ",
-        "followers_url": "https://api.github.com/users/Sec-champ/followers",
-        "following_url": "https://api.github.com/users/Sec-champ/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Sec-champ/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Sec-champ/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Sec-champ/subscriptions",
-        "organizations_url": "https://api.github.com/users/Sec-champ/orgs",
-        "repos_url": "https://api.github.com/users/Sec-champ/repos",
-        "events_url": "https://api.github.com/users/Sec-champ/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Sec-champ/received_events",
-        "type": "User",
-        "user_view_type": "public",
-        "site_admin": false
-      },
-      "push_protection_bypassed_at": "2025-06-02T13:43:00Z",
-      "push_protection_bypass_request_reviewer": null,
-      "push_protection_bypass_request_reviewer_comment": null,
-      "push_protection_bypass_request_comment": null,
-      "push_protection_bypass_request_html_url": null
-    }
-  ],
+  "secret_scanning": [],
   "dependabot": [
     {
       "number": 172,
@@ -2195,7 +2135,7 @@
         },
         "manifest_path": "frontend/package-lock.json",
         "scope": "runtime",
-        "relationship": "transitive"
+        "relationship": "direct"
       },
       "security_advisory": {
         "ghsa_id": "GHSA-5j4c-8p2g-v4jx",
