@@ -36,7 +36,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
+        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
         "message": {
           "text": "Unsafe deserialization depends on a user-provided value.\nUnsafe deserialization depends on a user-provided value."
         },
@@ -88,7 +88,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
+        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
         "message": {
           "text": "CSRF vulnerability due to protection being disabled."
         },
@@ -142,7 +142,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
+        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -196,7 +196,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
+        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -248,7 +248,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "924dba052b3fc7fe1744ef566e99c7c86b22dcff",
+        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
         "message": {
           "text": "This query depends on a user-provided value.\nThis query depends on a user-provided value."
         },
@@ -301,7 +301,7 @@
         "environment": "{}",
         "category": ".github/workflows/GHAS.yml:code-scanning",
         "state": "open",
-        "commit_sha": "0b5b77cbc0a179e3b824214e157173927d473bc8",
+        "commit_sha": "b222b89ee0ea0c20954ec235f971a1842995f9b5",
         "message": {
           "text": "Cross-site scripting vulnerability due to user-provided value."
         },
