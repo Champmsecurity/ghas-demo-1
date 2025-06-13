@@ -82,9 +82,27 @@ jobs:
           name: dependabot-alerts
           path: dependabot-alerts.json
  
+  zap-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run OWASP ZAP Baseline Scan
+        uses: zaproxy/action-baseline@v0.10.0
+        with:
+          target: 'https://preview.owasp-juice.shop/'
+          fail_action: false
+          allow_issue_writing: false
+          cmd_options: '-J zap_report.json'
+
+      - name: Upload ZAP JSON Report
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: zap-report
+          path: zap_report.json
+
+          
   combine-alerts:
     runs-on: ubuntu-latest
-    needs: [code-scanning, secret-scanning, dependabot]
+    needs: [code-scanning, secret-scanning, dependabot, zap-scan]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -104,13 +122,19 @@ jobs:
         with:
           name: dependabot-alerts
 
+      - name: Download ZAP Report
+        uses: actions/download-artifact@v4
+        with:
+          name: zap-report
+
       - name: Combine All Alerts into One JSON
         run: |
           jq -n \
             --slurpfile code code-scanning-alerts.json \
             --slurpfile secret secret-scanning-alerts.json \
             --slurpfile dependabot dependabot-alerts.json \
-            '{code_scanning: $code[0], secret_scanning: $secret[0], dependabot: $dependabot[0]}' \
+            --slurpfile zap zap_report.json \
+            '{code_scanning: $code[0], secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0]}' \
             > all-alerts.json
 
       - name: Upload Combined Alerts
@@ -128,20 +152,3 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
-
-  zap-scan:
-    runs-on: ubuntu-latest
-    needs: [code-scanning, secret-scanning, dependabot]
-    steps:
-      - name: Run OWASP ZAP Baseline Scan
-        uses: zaproxy/action-baseline@v0.10.0
-        with:
-          target: 'https://preview.owasp-juice.shop/'
-          fail_action: false
-          allow_issue_writing: false
-
-      - name: Upload ZAP Report
-        uses: actions/upload-artifact@v4.6.2
-        with:
-          name: zap-report
-          path: report_html.html
