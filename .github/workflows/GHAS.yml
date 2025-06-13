@@ -92,7 +92,13 @@ jobs:
           fail_action: false
           allow_issue_writing: false
           cmd_options: '-J zapreport.json'
-
+      
+      - name: Check if ZAP report exists
+        run: |
+          if [ ! -f zapreport.json ]; then
+            echo "ZAP report not found! Creating empty JSON."
+            echo "{}" > zapreport.json
+          fi
       - name: Upload ZAP JSON Report
         uses: actions/upload-artifact@v4.6.2
         with:
