@@ -82,7 +82,7 @@ jobs:
           name: dependabot-alerts
           path: dependabot-alerts.json
  
-  zap-scan:
+  zapscan:
     runs-on: ubuntu-latest
     steps:
       - name: Run OWASP ZAP Baseline Scan
@@ -91,18 +91,18 @@ jobs:
           target: 'https://preview.owasp-juice.shop/'
           fail_action: false
           allow_issue_writing: false
-          cmd_options: '-J zap_report.json'
+          cmd_options: '-J zapreport.json'
 
       - name: Upload ZAP JSON Report
         uses: actions/upload-artifact@v4.6.2
         with:
-          name: zap-report
-          path: zap_report.json
+          name: zapreport
+          path: zapreport.json
 
           
   combine-alerts:
     runs-on: ubuntu-latest
-    needs: [code-scanning, secret-scanning, dependabot, zap-scan]
+    needs: [code-scanning, secret-scanning, dependabot, zapscan]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -125,7 +125,7 @@ jobs:
       - name: Download ZAP Report
         uses: actions/download-artifact@v4
         with:
-          name: zap-report
+          name: zapreport
 
       - name: Combine All Alerts into One JSON
         run: |
@@ -133,7 +133,7 @@ jobs:
             --slurpfile code code-scanning-alerts.json \
             --slurpfile secret secret-scanning-alerts.json \
             --slurpfile dependabot dependabot-alerts.json \
-            --slurpfile zap zap_report.json \
+            --slurpfile zap zapreport.json \
             '{code_scanning: $code[0], secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0]}' \
             > all-alerts.json
 
