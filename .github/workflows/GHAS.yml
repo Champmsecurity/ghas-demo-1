@@ -94,8 +94,6 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
           target: 'https://preview.owasp-juice.shop'
-          rules_file_name: '.zap/zaprules.tsv'
-          cmd_options: '-a -j'
 
       - name: Upload ZAP JSON Report
         uses: actions/upload-artifact@v4.6.2
