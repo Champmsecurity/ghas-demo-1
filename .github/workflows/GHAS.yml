@@ -111,17 +111,14 @@ jobs:
       - name: Run Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
-          config: 'p/ci'  # Use the default CI ruleset, or specify your own
-
-      - name: Save Semgrep JSON Results
-        run: |
-          cp semgrep.sarif semgrep.json || cp semgrep.json semgrep.json
+          config: 'p/ci'
+          generate-json: true
 
       - name: Upload Semgrep JSON Results
         uses: actions/upload-artifact@v4.6.2
         with:
           name: semgrep-alerts
-          path: semgrep.json        
+          path: semgrep.json      
          
   combine-alerts:
     runs-on: ubuntu-latest
