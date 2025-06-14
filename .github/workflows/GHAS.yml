@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
   security-events: write
+  issues: write
 
 jobs:
   code-scanning:
@@ -91,7 +92,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@7c4deb10e6261301961c86d65d54a516394f9aed # v0.14.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.PAT_TOKEN }}
           target: 'https://preview.owasp-juice.shop'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a -j'
