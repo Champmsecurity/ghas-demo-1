@@ -101,6 +101,27 @@ jobs:
         with:
           name: zapreport
           path: zap_report.json
+  
+  semgrep:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: 'p/ci'  # Use the default CI ruleset, or specify your own
+
+      - name: Save Semgrep JSON Results
+        run: |
+          cp semgrep.sarif semgrep.json || cp semgrep.json semgrep.json
+
+      - name: Upload Semgrep JSON Results
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          name: semgrep-alerts
+          path: semgrep.json        
          
   combine-alerts:
     runs-on: ubuntu-latest
