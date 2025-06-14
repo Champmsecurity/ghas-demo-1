@@ -36,7 +36,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "fbc1a9c7dbb1ef5e5a0b857cd7ba0d3bb14e9c12",
+        "commit_sha": "8182339f4840746c08fa77799c12fcde639f1e03",
         "message": {
           "text": "Unsafe deserialization depends on a user-provided value.\nUnsafe deserialization depends on a user-provided value."
         },
@@ -88,7 +88,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "fbc1a9c7dbb1ef5e5a0b857cd7ba0d3bb14e9c12",
+        "commit_sha": "8182339f4840746c08fa77799c12fcde639f1e03",
         "message": {
           "text": "CSRF vulnerability due to protection being disabled."
         },
@@ -142,7 +142,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "739206d5251b410b59cac6ef14383d280e4cf4ec",
+        "commit_sha": "8182339f4840746c08fa77799c12fcde639f1e03",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -196,7 +196,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "739206d5251b410b59cac6ef14383d280e4cf4ec",
+        "commit_sha": "8182339f4840746c08fa77799c12fcde639f1e03",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -248,7 +248,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "739206d5251b410b59cac6ef14383d280e4cf4ec",
+        "commit_sha": "8182339f4840746c08fa77799c12fcde639f1e03",
         "message": {
           "text": "This query depends on a user-provided value.\nThis query depends on a user-provided value."
         },
@@ -301,7 +301,7 @@
         "environment": "{}",
         "category": ".github/workflows/GHAS.yml:code-scanning",
         "state": "open",
-        "commit_sha": "739206d5251b410b59cac6ef14383d280e4cf4ec",
+        "commit_sha": "ba5d7a37c019131f2caa58e97110c6d520af88e0",
         "message": {
           "text": "Cross-site scripting vulnerability due to user-provided value."
         },
@@ -11926,8 +11926,8 @@
           }
         },
         "epss": {
-          "percentage": 0.0093,
-          "percentile": 0.74791
+          "percentage": 0.00857,
+          "percentile": 0.73951
         },
         "cvss": {
           "vector_string": "CVSS:3.0/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
@@ -13293,8 +13293,8 @@
           }
         },
         "epss": {
-          "percentage": 0.0049,
-          "percentile": 0.64503
+          "percentage": 0.00473,
+          "percentile": 0.63697
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
@@ -16241,8 +16241,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00042,
-          "percentile": 0.12433
+          "percentage": 0.00046,
+          "percentile": 0.1392
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
@@ -16393,8 +16393,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00307,
-          "percentile": 0.53386
+          "percentage": 0.00348,
+          "percentile": 0.56682
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -17304,8 +17304,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00214,
-          "percentile": 0.44212
+          "percentage": 0.00242,
+          "percentile": 0.47625
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
@@ -17855,8 +17855,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00036,
-          "percentile": 0.09144
+          "percentage": 0.00033,
+          "percentile": 0.08085
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
@@ -20293,8 +20293,8 @@
           }
         },
         "epss": {
-          "percentage": 0.04611,
-          "percentile": 0.88709
+          "percentage": 0.06121,
+          "percentile": 0.90301
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N",
@@ -21605,7 +21605,7 @@
         },
         "epss": {
           "percentage": 0.00831,
-          "percentile": 0.73437
+          "percentile": 0.73504
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
