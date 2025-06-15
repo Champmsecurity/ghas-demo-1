@@ -32,6 +32,9 @@ jobs:
         uses: returntocorp/semgrep-action@fcd5ab7459e8d91cb1777481980d1b18b4fc6735
         with:
           config: auto
+          include-git-ignored: true
+          max-target-bytes: 5000000
+          no-ignore: true
           sarif: true
           output: semgrep.sarif
           continue-on-error: true  
