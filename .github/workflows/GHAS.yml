@@ -34,17 +34,10 @@ jobs:
         with:
           Config: auto
           generateSarif: "1"
-          output: semgrep.sarif
         continue-on-error: true
 
-      - name: Check if SARIF file exists
-        run: |
-          if [ -f semgrep.sarif ]; then
-            echo "SARIF file found."
-          else
-            echo "SARIF file missing!"
-            exit 1
-          fi
+      - name: Check SARIF file
+        run: ls -l semgrep.sarif
 
       - name: Upload SARIF file
         if: always()
