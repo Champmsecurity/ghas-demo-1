@@ -117,18 +117,17 @@ jobs:
     - name: Install Semgrep
       run: pip install --upgrade semgrep
 
-    - name: Run Semgrep
-      run: semgrep --config auto --json --output semgrep-alerts.json || true
+    - name: Run Semgrep and output SARIF
+      run: semgrep --config auto --sarif --output semgrep.sarif || true
 
-    - name: Upload Semgrep Results
-      uses: actions/upload-artifact@v4
+    - name: Upload SARIF to GitHub Code Scanning
+      uses: github/codeql-action/upload-sarif@v3
       with:
-        name: semgrep-alerts
-        path: semgrep-alerts.json
+        sarif_file: semgrep.sarif
     
   combine-alerts:
     runs-on: ubuntu-latest
-    needs: [code-scanning, secret-scanning, dependabot, zap_scan,semgrep]
+    needs: [code-scanning, secret-scanning, dependabot, zap_scan]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -151,12 +150,7 @@ jobs:
       - name: Download ZAP JSON Report
         uses: actions/download-artifact@v4
         with:
-          name: zapreport
-      
-      - name: Download Semgrep Alerts
-        uses: actions/download-artifact@v4
-        with:
-          name: semgrep-alerts    
+          name: zapreport  
       
       - name: Combine All Alerts into One JSON
         run: |
@@ -165,8 +159,7 @@ jobs:
             --slurpfile secret secret-scanning-alerts.json \
             --slurpfile dependabot dependabot-alerts.json \
             --slurpfile zap zap_report.json \
-            --slurpfile semgrep semgrep.json \
-            '{code_scanning: $code[0], secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0], semgrep: $semgrep[0]}' \
+            '{code_scanning: $code[0], secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0]' \
             > all-alerts.json
 
       - name: Upload Combined Alerts
