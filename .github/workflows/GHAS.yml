@@ -29,10 +29,11 @@ jobs:
 
       # --- Semgrep Analysis ---
       - name: Run Semgrep
-        uses: returntocorp/semgrep-action@v1
+        uses: returntocorp/semgrep-action@fcd5ab7459e8d91cb1777481980d1b18b4fc6735
         with:
           config: auto
-          generateSarif: true
+          sarif: true
+          output: semgrep.sarif
         continue-on-error: true
 
       - name: Check if SARIF file exists
@@ -62,6 +63,7 @@ jobs:
         with:
           name: code-scanning-alerts
           path: code-scanning-alerts.json
+          
   secret-scanning:
     runs-on: ubuntu-latest
     steps:
