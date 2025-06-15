@@ -1,6 +1,712 @@
 {
   "code_scanning": [
     {
+      "number": 19,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/19",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/19",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "name": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.",
+        "help": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file."
+        },
+        "location": {
+          "path": "storage-service/target/classes/application.properties",
+          "start_line": 4,
+          "end_line": 4,
+          "start_column": 34,
+          "end_column": 54
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/19/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 18,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/18",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/18",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "name": "generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "AWS Secret Access Key detected",
+        "help": "AWS Secret Access Key detected\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "AWS Secret Access Key detected"
+        },
+        "location": {
+          "path": "storage-service/src/main/resources/application.properties",
+          "start_line": 7,
+          "end_line": 7,
+          "start_column": 1,
+          "end_column": 63
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/18/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 17,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/17",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/17",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "name": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.",
+        "help": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file."
+        },
+        "location": {
+          "path": "storage-service/src/main/resources/application.properties",
+          "start_line": 6,
+          "end_line": 6,
+          "start_column": 19,
+          "end_column": 39
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/17/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 16,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/16",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/16",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "name": "generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "AWS Secret Access Key detected",
+        "help": "AWS Secret Access Key detected\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-aws-secret-access-key.detected-aws-secret-access-key"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "AWS Secret Access Key detected"
+        },
+        "location": {
+          "path": "storage-service/src/main/resources/application.dev.properties",
+          "start_line": 2,
+          "end_line": 2,
+          "start_column": 1,
+          "end_column": 53
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/16/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 15,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/15",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/15",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "name": "generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.",
+        "help": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-aws-access-key-id-value.detected-aws-access-key-id-value"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "AWS Access Key ID Value detected. This is a sensitive credential and should not be hardcoded here. Instead, read this value from an environment variable or keep it in a separate, private file."
+        },
+        "location": {
+          "path": "storage-service/src/main/resources/application.dev.properties",
+          "start_line": 1,
+          "end_line": 1,
+          "start_column": 12,
+          "end_column": 32
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/15/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 14,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/14",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/14",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "java.spring.security.injection.tainted-file-path.tainted-file-path",
+        "severity": "error",
+        "description": "Semgrep Finding: java.spring.security.injection.tainted-file-path.tainted-file-path",
+        "name": "java.spring.security.injection.tainted-file-path.tainted-file-path",
+        "tags": [
+          "CWE-23: Relative Path Traversal",
+          "HIGH CONFIDENCE",
+          "OWASP-A01:2021 - Broken Access Control",
+          "security"
+        ],
+        "full_description": "Detected user input controlling a file path. An attacker could control the location of this file, to include going backwards in the directory with '../'. To address this, ensure that user-controlled variables in file paths are sanitized. You may also consider using a utility method such as org.apache.commons.io.FilenameUtils.getName(...) to only retrieve the file name from the path.",
+        "help": "Detected user input controlling a file path. An attacker could control the location of this file, to include going backwards in the directory with '../'. To address this, ensure that user-controlled variables in file paths are sanitized. You may also consider using a utility method such as org.apache.commons.io.FilenameUtils.getName(...) to only retrieve the file name from the path.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/java.spring.security.injection.tainted-file-path.tainted-file-path)\n - [https://owasp.org/www-community/attacks/Path_Traversal](https://owasp.org/www-community/attacks/Path_Traversal)\n",
+        "help_uri": "https://semgrep.dev/r/java.spring.security.injection.tainted-file-path.tainted-file-path"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Detected user input controlling a file path. An attacker could control the location of this file, to include going backwards in the directory with '../'. To address this, ensure that user-controlled variables in file paths are sanitized. You may also consider using a utility method such as org.apache.commons.io.FilenameUtils.getName(...) to only retrieve the file name from the path."
+        },
+        "location": {
+          "path": "storage-service/src/main/java/com/github/advancedsecurity/storageservice/controllers/BlobController.java",
+          "start_line": 55,
+          "end_line": 55,
+          "start_column": 33,
+          "end_column": 133
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/14/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 13,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/13",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/13",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "java.lang.security.audit.object-deserialization.object-deserialization",
+        "severity": "warning",
+        "description": "Semgrep Finding: java.lang.security.audit.object-deserialization.object-deserialization",
+        "name": "java.lang.security.audit.object-deserialization.object-deserialization",
+        "tags": [
+          "CWE-502: Deserialization of Untrusted Data",
+          "LOW CONFIDENCE",
+          "OWASP-A08:2017 - Insecure Deserialization",
+          "OWASP-A08:2021 - Software and Data Integrity Failures",
+          "security"
+        ],
+        "full_description": "Found object deserialization using ObjectInputStream. Deserializing entire Java objects is dangerous because malicious actors can create Java object streams with unintended consequences. Ensure that the objects being deserialized are not user-controlled. If this must be done, consider using HMACs to sign the data stream to make sure it is not tampered with, or consider only transmitting object fields and populating a new object.",
+        "help": "Found object deserialization using ObjectInputStream. Deserializing entire Java objects is dangerous because malicious actors can create Java object streams with unintended consequences. Ensure that the objects being deserialized are not user-controlled. If this must be done, consider using HMACs to sign the data stream to make sure it is not tampered with, or consider only transmitting object fields and populating a new object.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/java.lang.security.audit.object-deserialization.object-deserialization)\n - [https://www.owasp.org/index.php/Deserialization_of_untrusted_data](https://www.owasp.org/index.php/Deserialization_of_untrusted_data)\n - [https://www.oracle.com/java/technologies/javase/seccodeguide.html#8](https://www.oracle.com/java/technologies/javase/seccodeguide.html#8)\n",
+        "help_uri": "https://semgrep.dev/r/java.lang.security.audit.object-deserialization.object-deserialization"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Found object deserialization using ObjectInputStream. Deserializing entire Java objects is dangerous because malicious actors can create Java object streams with unintended consequences. Ensure that the objects being deserialized are not user-controlled. If this must be done, consider using HMACs to sign the data stream to make sure it is not tampered with, or consider only transmitting object fields and populating a new object."
+        },
+        "location": {
+          "path": "storage-service/src/main/java/com/github/advancedsecurity/storageservice/controllers/BlobController.java",
+          "start_line": 44,
+          "end_line": 44,
+          "start_column": 9,
+          "end_column": 67
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/13/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 12,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/12",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/12",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled",
+        "severity": "warning",
+        "description": "Semgrep Finding: java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled",
+        "name": "java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled",
+        "tags": [
+          "CWE-352: Cross-Site Request Forgery (CSRF)",
+          "LOW CONFIDENCE",
+          "OWASP-A01:2021 - Broken Access Control",
+          "security"
+        ],
+        "full_description": "CSRF protection is disabled for this configuration. This is a security risk.",
+        "help": "CSRF protection is disabled for this configuration. This is a security risk.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled)\n - [https://owasp.org/Top10/A01_2021-Broken_Access_Control](https://owasp.org/Top10/A01_2021-Broken_Access_Control)\n",
+        "help_uri": "https://semgrep.dev/r/java.spring.security.audit.spring-csrf-disabled.spring-csrf-disabled"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "CSRF protection is disabled for this configuration. This is a security risk."
+        },
+        "location": {
+          "path": "storage-service/src/main/java/com/github/advancedsecurity/storageservice/WebSecurityConfig.java",
+          "start_line": 46,
+          "end_line": 47,
+          "start_column": 3,
+          "end_column": 22
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/12/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 11,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/11",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/11",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "go.lang.security.audit.net.use-tls.use-tls",
+        "severity": "warning",
+        "description": "Semgrep Finding: go.lang.security.audit.net.use-tls.use-tls",
+        "name": "go.lang.security.audit.net.use-tls.use-tls",
+        "tags": [
+          "CWE-319: Cleartext Transmission of Sensitive Information",
+          "MEDIUM CONFIDENCE",
+          "OWASP-A02:2021 - Cryptographic Failures",
+          "OWASP-A03:2017 - Sensitive Data Exposure",
+          "security"
+        ],
+        "full_description": "Found an HTTP server without TLS. Use 'http.ListenAndServeTLS' instead. See https://golang.org/pkg/net/http/#ListenAndServeTLS for more information.",
+        "help": "Found an HTTP server without TLS. Use 'http.ListenAndServeTLS' instead. See https://golang.org/pkg/net/http/#ListenAndServeTLS for more information.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/go.lang.security.audit.net.use-tls.use-tls)\n - [https://golang.org/pkg/net/http/#ListenAndServeTLS](https://golang.org/pkg/net/http/#ListenAndServeTLS)\n",
+        "help_uri": "https://semgrep.dev/r/go.lang.security.audit.net.use-tls.use-tls"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Found an HTTP server without TLS. Use 'http.ListenAndServeTLS' instead. See https://golang.org/pkg/net/http/#ListenAndServeTLS for more information."
+        },
+        "location": {
+          "path": "gallery-service/main.go",
+          "start_line": 710,
+          "end_line": 710,
+          "start_column": 12,
+          "end_column": 45
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/11/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 10,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/10",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/10",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-jwt-token.detected-jwt-token",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-jwt-token.detected-jwt-token",
+        "name": "generic.secrets.security.detected-jwt-token.detected-jwt-token",
+        "tags": [
+          "CWE-321: Use of Hard-coded Cryptographic Key",
+          "LOW CONFIDENCE",
+          "OWASP-A02:2021 - Cryptographic Failures",
+          "security"
+        ],
+        "full_description": "JWT token detected",
+        "help": "JWT token detected\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-jwt-token.detected-jwt-token)\n - [https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/](https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-jwt-token.detected-jwt-token"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "JWT token detected"
+        },
+        "location": {
+          "path": "gallery-service/gallery-service.postman_collection.json",
+          "start_line": 232,
+          "end_line": 232,
+          "start_column": 14,
+          "end_column": 220
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/10/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 9,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/9",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/9",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "javascript.vue.security.audit.xss.templates.avoid-v-html.avoid-v-html",
+        "severity": "warning",
+        "description": "Semgrep Finding: javascript.vue.security.audit.xss.templates.avoid-v-html.avoid-v-html",
+        "name": "javascript.vue.security.audit.xss.templates.avoid-v-html.avoid-v-html",
+        "tags": [
+          "CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')",
+          "LOW CONFIDENCE",
+          "OWASP-A03:2021 - Injection",
+          "OWASP-A07:2017 - Cross-Site Scripting (XSS)",
+          "security"
+        ],
+        "full_description": "Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to XSS vulnerabilities. Only use HTML interpolation on trusted content and never on user-provided content.",
+        "help": "Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to XSS vulnerabilities. Only use HTML interpolation on trusted content and never on user-provided content.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/javascript.vue.security.audit.xss.templates.avoid-v-html.avoid-v-html)\n - [https://vuejs.org/v2/guide/syntax.html#Raw-HTML](https://vuejs.org/v2/guide/syntax.html#Raw-HTML)\n",
+        "help_uri": "https://semgrep.dev/r/javascript.vue.security.audit.xss.templates.avoid-v-html.avoid-v-html"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Dynamically rendering arbitrary HTML on your website can be very dangerous because it can easily lead to XSS vulnerabilities. Only use HTML interpolation on trusted content and never on user-provided content."
+        },
+        "location": {
+          "path": "frontend/src/components/Login.vue",
+          "start_line": 5,
+          "end_line": 5,
+          "start_column": 7,
+          "end_column": 17
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/9/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 8,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/8",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/8",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+        "severity": "error",
+        "description": "Semgrep Finding: python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+        "name": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+        "tags": [
+          "CWE-522: Insufficiently Protected Credentials",
+          "HIGH CONFIDENCE",
+          "OWASP-A02:2017 - Broken Authentication",
+          "OWASP-A04:2021 - Insecure Design",
+          "security"
+        ],
+        "full_description": "Hardcoded JWT secret or private key is used. This is a Insufficiently Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html Consider using an appropriate security mechanism to protect the credentials (e.g. keeping secrets in environment variables)",
+        "help": "Hardcoded JWT secret or private key is used. This is a Insufficiently Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html Consider using an appropriate security mechanism to protect the credentials (e.g. keeping secrets in environment variables)\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret)\n - [https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/](https://semgrep.dev/blog/2020/hardcoded-secrets-unverified-tokens-and-other-common-jwt-mistakes/)\n",
+        "help_uri": "https://semgrep.dev/r/python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Hardcoded JWT secret or private key is used. This is a Insufficiently Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html Consider using an appropriate security mechanism to protect the credentials (e.g. keeping secrets in environment variables)"
+        },
+        "location": {
+          "path": "authn-service/authn-service.py",
+          "start_line": 75,
+          "end_line": 75,
+          "start_column": 13,
+          "end_column": 88
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/8/instances",
+      "dismissal_approved_by": null
+    },
+    {
+      "number": 7,
+      "created_at": "2025-06-15T13:16:16Z",
+      "updated_at": "2025-06-15T13:16:16Z",
+      "url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/7",
+      "html_url": "https://github.com/Champmsecurity/ghas-demo-1/security/code-scanning/7",
+      "state": "open",
+      "fixed_at": null,
+      "dismissed_by": null,
+      "dismissed_at": null,
+      "dismissed_reason": null,
+      "dismissed_comment": null,
+      "rule": {
+        "id": "generic.secrets.security.detected-generic-secret.detected-generic-secret",
+        "severity": "error",
+        "description": "Semgrep Finding: generic.secrets.security.detected-generic-secret.detected-generic-secret",
+        "name": "generic.secrets.security.detected-generic-secret.detected-generic-secret",
+        "tags": [
+          "CWE-798: Use of Hard-coded Credentials",
+          "LOW CONFIDENCE",
+          "OWASP-A07:2021 - Identification and Authentication Failures",
+          "security"
+        ],
+        "full_description": "Generic Secret detected",
+        "help": "Generic Secret detected\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [Semgrep Rule](https://semgrep.dev/r/generic.secrets.security.detected-generic-secret.detected-generic-secret)\n - [https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures](https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures)\n",
+        "help_uri": "https://semgrep.dev/r/generic.secrets.security.detected-generic-secret.detected-generic-secret"
+      },
+      "tool": {
+        "name": "Semgrep OSS",
+        "guid": null,
+        "version": "1.125.0"
+      },
+      "most_recent_instance": {
+        "ref": "refs/heads/main",
+        "analysis_key": ".github/workflows/GHAS.yml:semgrep",
+        "environment": "{}",
+        "category": ".github/workflows/GHAS.yml:semgrep",
+        "state": "open",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
+        "message": {
+          "text": "Generic Secret detected"
+        },
+        "location": {
+          "path": "authn-service/.env",
+          "start_line": 2,
+          "end_line": 2,
+          "start_column": 8,
+          "end_column": 57
+        },
+        "classifications": []
+      },
+      "instances_url": "https://api.github.com/repos/Champmsecurity/ghas-demo-1/code-scanning/alerts/7/instances",
+      "dismissal_approved_by": null
+    },
+    {
       "number": 6,
       "created_at": "2025-06-02T13:16:22Z",
       "updated_at": "2025-06-02T13:16:22Z",
@@ -36,7 +742,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "24e78f24145ce565040f62f06cd549ffefc9943a",
+        "commit_sha": "dff43583ad4b8adce8638faa217229218a41a569",
         "message": {
           "text": "Unsafe deserialization depends on a user-provided value.\nUnsafe deserialization depends on a user-provided value."
         },
@@ -88,7 +794,7 @@
         "environment": "{\"build-mode\":\"none\",\"language\":\"java-kotlin\"}",
         "category": "/language:java-kotlin",
         "state": "open",
-        "commit_sha": "24e78f24145ce565040f62f06cd549ffefc9943a",
+        "commit_sha": "dff43583ad4b8adce8638faa217229218a41a569",
         "message": {
           "text": "CSRF vulnerability due to protection being disabled."
         },
@@ -142,7 +848,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "aadde15a17fdd6d1bc13f5cc4fda905a5818aa05",
+        "commit_sha": "dff43583ad4b8adce8638faa217229218a41a569",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -196,7 +902,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "aadde15a17fdd6d1bc13f5cc4fda905a5818aa05",
+        "commit_sha": "dff43583ad4b8adce8638faa217229218a41a569",
         "message": {
           "text": "Sensitive data returned by HTTP request headers flows to a logging call."
         },
@@ -248,7 +954,7 @@
         "environment": "{\"build-mode\":\"autobuild\",\"language\":\"go\"}",
         "category": "/language:go",
         "state": "open",
-        "commit_sha": "aadde15a17fdd6d1bc13f5cc4fda905a5818aa05",
+        "commit_sha": "dff43583ad4b8adce8638faa217229218a41a569",
         "message": {
           "text": "This query depends on a user-provided value.\nThis query depends on a user-provided value."
         },
@@ -301,7 +1007,7 @@
         "environment": "{}",
         "category": ".github/workflows/GHAS.yml:code-scanning",
         "state": "open",
-        "commit_sha": "aadde15a17fdd6d1bc13f5cc4fda905a5818aa05",
+        "commit_sha": "822b6e3673f9886a90928ea496e881b5ffc42b98",
         "message": {
           "text": "Cross-site scripting vulnerability due to user-provided value."
         },
@@ -2066,8 +2772,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00151,
-          "percentile": 0.36889
+          "percentage": 0.0017,
+          "percentile": 0.39124
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -2197,8 +2903,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00151,
-          "percentile": 0.36889
+          "percentage": 0.0017,
+          "percentile": 0.39124
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -4357,7 +5063,7 @@
         },
         "epss": {
           "percentage": 0.0032,
-          "percentile": 0.54503
+          "percentile": 0.54497
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
@@ -5587,7 +6293,7 @@
         },
         "epss": {
           "percentage": 0.00079,
-          "percentile": 0.24509
+          "percentile": 0.24469
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
@@ -17590,8 +18296,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00034,
-          "percentile": 0.08192
+          "percentage": 0.0004,
+          "percentile": 0.11416
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
@@ -18086,8 +18792,8 @@
           }
         },
         "epss": {
-          "percentage": 0.0005,
-          "percentile": 0.15482
+          "percentage": 0.00156,
+          "percentile": 0.3751
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
@@ -18203,8 +18909,8 @@
           }
         },
         "epss": {
-          "percentage": 0.00085,
-          "percentile": 0.25952
+          "percentage": 0.00242,
+          "percentile": 0.47607
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
@@ -19237,7 +19943,7 @@
         },
         "epss": {
           "percentage": 0.00093,
-          "percentile": 0.27509
+          "percentile": 0.27477
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
@@ -21045,7 +21751,7 @@
         },
         "epss": {
           "percentage": 0.00038,
-          "percentile": 0.10505
+          "percentile": 0.10485
         },
         "cvss": {
           "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:N/I:H/A:N",
@@ -22827,7 +23533,7 @@
   "zap": {
     "@programName": "ZAP",
     "@version": "2.16.1",
-    "@generated": "Sat, 14 Jun 2025 13:37:45",
+    "@generated": "Sun, 15 Jun 2025 13:21:08",
     "site": [
       {
         "@name": "https://preview.owasp-juice.shop",
@@ -22846,7 +23552,7 @@
             "desc": "<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>",
             "instances": [
               {
-                "id": "6",
+                "id": "16",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -22855,7 +23561,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "108",
+                "id": "105",
                 "uri": "https://preview.owasp-juice.shop/",
                 "method": "GET",
                 "param": "",
@@ -22864,7 +23570,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "107",
+                "id": "109",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
                 "param": "",
@@ -22873,7 +23579,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "92",
+                "id": "79",
                 "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "",
@@ -22882,7 +23588,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "79",
+                "id": "86",
                 "uri": "https://preview.owasp-juice.shop/ftp/coupons_2013.md.bak",
                 "method": "GET",
                 "param": "",
@@ -22900,7 +23606,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "80",
+                "id": "94",
                 "uri": "https://preview.owasp-juice.shop/ftp/encrypt.pyc",
                 "method": "GET",
                 "param": "",
@@ -22909,7 +23615,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "94",
+                "id": "95",
                 "uri": "https://preview.owasp-juice.shop/ftp/package-lock.json.bak",
                 "method": "GET",
                 "param": "",
@@ -22918,7 +23624,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "101",
+                "id": "96",
                 "uri": "https://preview.owasp-juice.shop/ftp/package.json.bak",
                 "method": "GET",
                 "param": "",
@@ -22927,7 +23633,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "104",
+                "id": "103",
                 "uri": "https://preview.owasp-juice.shop/ftp/suspicious_errors.yml",
                 "method": "GET",
                 "param": "",
@@ -22936,7 +23642,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "36",
+                "id": "19",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -22951,7 +23657,7 @@
             "reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</p><p>https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</p><p>https://www.w3.org/TR/CSP/</p><p>https://w3c.github.io/webappsec-csp/</p><p>https://web.dev/articles/csp</p><p>https://caniuse.com/#feat=contentsecuritypolicy</p><p>https://content-security-policy.com/</p>",
             "cweid": "693",
             "wascid": "15",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10098",
@@ -22964,7 +23670,7 @@
             "desc": "<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server.</p>",
             "instances": [
               {
-                "id": "7",
+                "id": "17",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -22973,7 +23679,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "20",
+                "id": "0",
                 "uri": "https://preview.owasp-juice.shop/assets/public/favicon_js.ico",
                 "method": "GET",
                 "param": "",
@@ -22982,8 +23688,8 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "86",
-                "uri": "https://preview.owasp-juice.shop/ftp/acquisitions.md",
+                "id": "80",
+                "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "",
                 "attack": "",
@@ -22991,8 +23697,8 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "87",
-                "uri": "https://preview.owasp-juice.shop/ftp/encrypt.pyc",
+                "id": "91",
+                "uri": "https://preview.owasp-juice.shop/ftp/incident-support.kdbx",
                 "method": "GET",
                 "param": "",
                 "attack": "",
@@ -23000,7 +23706,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "67",
+                "id": "66",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -23009,7 +23715,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "29",
+                "id": "60",
                 "uri": "https://preview.owasp-juice.shop/polyfills.js",
                 "method": "GET",
                 "param": "",
@@ -23018,7 +23724,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "1",
+                "id": "2",
                 "uri": "https://preview.owasp-juice.shop/robots.txt",
                 "method": "GET",
                 "param": "",
@@ -23027,7 +23733,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "24",
+                "id": "9",
                 "uri": "https://preview.owasp-juice.shop/runtime.js",
                 "method": "GET",
                 "param": "",
@@ -23036,7 +23742,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "37",
+                "id": "21",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23045,7 +23751,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "64",
+                "id": "59",
                 "uri": "https://preview.owasp-juice.shop/styles.css",
                 "method": "GET",
                 "param": "",
@@ -23054,7 +23760,7 @@
                 "otherinfo": "The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing."
               },
               {
-                "id": "73",
+                "id": "72",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -23069,7 +23775,7 @@
             "reference": "<p>https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</p>",
             "cweid": "264",
             "wascid": "14",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10017",
@@ -23082,7 +23788,7 @@
             "desc": "<p>The page includes one or more script files from a third-party domain.</p>",
             "instances": [
               {
-                "id": "8",
+                "id": "20",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
@@ -23091,7 +23797,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "9",
+                "id": "23",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
@@ -23100,61 +23806,61 @@
                 "otherinfo": ""
               },
               {
-                "id": "109",
+                "id": "106",
                 "uri": "https://preview.owasp-juice.shop/",
                 "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
                 "attack": "",
                 "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+                "otherinfo": ""
+              },
+              {
+                "id": "107",
+                "uri": "https://preview.owasp-juice.shop/",
+                "method": "GET",
+                "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+                "attack": "",
+                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+                "otherinfo": ""
+              },
+              {
+                "id": "113",
+                "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:43:13",
+                "method": "GET",
+                "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
+                "attack": "",
+                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
+                "otherinfo": ""
+              },
+              {
+                "id": "114",
+                "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:43:13",
+                "method": "GET",
+                "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+                "attack": "",
+                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
                 "otherinfo": ""
               },
               {
                 "id": "110",
-                "uri": "https://preview.owasp-juice.shop/",
+                "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
-                "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+                "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
                 "attack": "",
-                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
+                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
                 "otherinfo": ""
               },
               {
                 "id": "111",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
-                "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
-                "attack": "",
-                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
-                "otherinfo": ""
-              },
-              {
-                "id": "112",
-                "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
-                "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
                 "attack": "",
                 "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
                 "otherinfo": ""
               },
               {
-                "id": "114",
-                "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:365:14",
-                "method": "GET",
-                "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
-                "attack": "",
-                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js\"></script>",
-                "otherinfo": ""
-              },
-              {
-                "id": "115",
-                "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:365:14",
-                "method": "GET",
-                "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
-                "attack": "",
-                "evidence": "<script src=\"//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\"></script>",
-                "otherinfo": ""
-              },
-              {
-                "id": "38",
+                "id": "24",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js",
@@ -23163,7 +23869,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "39",
+                "id": "25",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js",
@@ -23178,7 +23884,7 @@
             "reference": "",
             "cweid": "829",
             "wascid": "15",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10110",
@@ -23191,7 +23897,7 @@
             "desc": "<p>A dangerous JS function seems to be in use that would leave the site vulnerable.</p>",
             "instances": [
               {
-                "id": "71",
+                "id": "70",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -23200,7 +23906,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "77",
+                "id": "76",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -23215,7 +23921,7 @@
             "reference": "<p>https://angular.io/guide/security</p>",
             "cweid": "749",
             "wascid": "-1",
-            "sourceid": "22"
+            "sourceid": "21"
           },
           {
             "pluginid": "10063",
@@ -23228,7 +23934,7 @@
             "desc": "<p>The header has now been renamed to Permissions-Policy.</p>",
             "instances": [
               {
-                "id": "17",
+                "id": "53",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23237,7 +23943,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "96",
+                "id": "83",
                 "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "",
@@ -23246,7 +23952,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "100",
+                "id": "98",
                 "uri": "https://preview.owasp-juice.shop/ftp/eastere.gg",
                 "method": "GET",
                 "param": "",
@@ -23255,7 +23961,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "91",
+                "id": "99",
                 "uri": "https://preview.owasp-juice.shop/ftp/encrypt.pyc",
                 "method": "GET",
                 "param": "",
@@ -23264,7 +23970,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "72",
+                "id": "71",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -23273,7 +23979,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "43",
+                "id": "63",
                 "uri": "https://preview.owasp-juice.shop/polyfills.js",
                 "method": "GET",
                 "param": "",
@@ -23282,7 +23988,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "28",
+                "id": "13",
                 "uri": "https://preview.owasp-juice.shop/runtime.js",
                 "method": "GET",
                 "param": "",
@@ -23291,7 +23997,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "61",
+                "id": "48",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23300,7 +24006,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "78",
+                "id": "77",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -23328,7 +24034,7 @@
             "desc": "<p>Cross-Origin-Embedder-Policy header is a response header that prevents a document from loading any cross-origin resources that don't explicitly grant the document permission (using CORP or CORS).</p>",
             "instances": [
               {
-                "id": "18",
+                "id": "54",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "Cross-Origin-Embedder-Policy",
@@ -23346,7 +24052,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "122",
+                "id": "117",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
                 "param": "Cross-Origin-Embedder-Policy",
@@ -23355,7 +24061,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "98",
+                "id": "84",
                 "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "Cross-Origin-Embedder-Policy",
@@ -23364,7 +24070,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "62",
+                "id": "49",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "Cross-Origin-Embedder-Policy",
@@ -23373,7 +24079,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "19",
+                "id": "57",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "Cross-Origin-Opener-Policy",
@@ -23391,7 +24097,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "123",
+                "id": "118",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
                 "param": "Cross-Origin-Opener-Policy",
@@ -23400,7 +24106,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "102",
+                "id": "85",
                 "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "Cross-Origin-Opener-Policy",
@@ -23409,7 +24115,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "63",
+                "id": "50",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "Cross-Origin-Opener-Policy",
@@ -23437,7 +24143,7 @@
             "desc": "<p>Permissions Policy Header is an added layer of security that helps to restrict from unauthorized access or usage of browser/client features by web resources. This policy ensures the user privacy by limiting or specifying the features of the browsers can be used by the web resources. Permissions Policy provides a set of standard HTTP headers that allow website owners to limit which features of browsers can be used by the page such as camera, microphone, location, full screen etc.</p>",
             "instances": [
               {
-                "id": "89",
+                "id": "90",
                 "uri": "https://preview.owasp-juice.shop/ftp/coupons_2013.md.bak",
                 "method": "GET",
                 "param": "",
@@ -23446,7 +24152,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "97",
+                "id": "100",
                 "uri": "https://preview.owasp-juice.shop/ftp/package-lock.json.bak",
                 "method": "GET",
                 "param": "",
@@ -23474,7 +24180,7 @@
             "desc": "<p>The web/application server is leaking version information via the \"Server\" HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>",
             "instances": [
               {
-                "id": "81",
+                "id": "87",
                 "uri": "https://preview.owasp-juice.shop/ftp/coupons_2013.md.bak",
                 "method": "GET",
                 "param": "",
@@ -23483,7 +24189,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "95",
+                "id": "97",
                 "uri": "https://preview.owasp-juice.shop/ftp/package-lock.json.bak",
                 "method": "GET",
                 "param": "",
@@ -23492,7 +24198,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "103",
+                "id": "101",
                 "uri": "https://preview.owasp-juice.shop/ftp/package.json.bak",
                 "method": "GET",
                 "param": "",
@@ -23520,7 +24226,7 @@
             "desc": "<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>",
             "instances": [
               {
-                "id": "11",
+                "id": "33",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23529,7 +24235,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "21",
+                "id": "3",
                 "uri": "https://preview.owasp-juice.shop/assets/public/favicon_js.ico",
                 "method": "GET",
                 "param": "",
@@ -23538,8 +24244,8 @@
                 "otherinfo": ""
               },
               {
-                "id": "88",
-                "uri": "https://preview.owasp-juice.shop/ftp/acquisitions.md",
+                "id": "81",
+                "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "",
                 "attack": "",
@@ -23547,7 +24253,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "83",
+                "id": "88",
                 "uri": "https://preview.owasp-juice.shop/ftp/coupons_2013.md.bak",
                 "method": "GET",
                 "param": "",
@@ -23556,7 +24262,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "69",
+                "id": "68",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -23565,7 +24271,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "30",
+                "id": "61",
                 "uri": "https://preview.owasp-juice.shop/polyfills.js",
                 "method": "GET",
                 "param": "",
@@ -23574,7 +24280,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "2",
+                "id": "4",
                 "uri": "https://preview.owasp-juice.shop/robots.txt",
                 "method": "GET",
                 "param": "",
@@ -23583,7 +24289,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "25",
+                "id": "10",
                 "uri": "https://preview.owasp-juice.shop/runtime.js",
                 "method": "GET",
                 "param": "",
@@ -23592,7 +24298,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "48",
+                "id": "32",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23601,7 +24307,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "65",
+                "id": "64",
                 "uri": "https://preview.owasp-juice.shop/styles.css",
                 "method": "GET",
                 "param": "",
@@ -23610,7 +24316,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "75",
+                "id": "74",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -23625,7 +24331,7 @@
             "reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</p><p>https://owasp.org/www-community/Security_Headers</p><p>https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</p><p>https://caniuse.com/stricttransportsecurity</p><p>https://datatracker.ietf.org/doc/html/rfc6797</p>",
             "cweid": "319",
             "wascid": "15",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10096",
@@ -23638,7 +24344,7 @@
             "desc": "<p>A timestamp was disclosed by the application/web server. - Unix</p>",
             "instances": [
               {
-                "id": "13",
+                "id": "38",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23647,7 +24353,7 @@
                 "otherinfo": "1650485437, which evaluates to: 2022-04-20 20:10:37."
               },
               {
-                "id": "15",
+                "id": "41",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23656,7 +24362,7 @@
                 "otherinfo": "1981395349, which evaluates to: 2032-10-14 19:35:49."
               },
               {
-                "id": "14",
+                "id": "39",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23665,61 +24371,43 @@
                 "otherinfo": "2038834951, which evaluates to: 2034-08-10 15:02:31."
               },
               {
-                "id": "12",
+                "id": "35",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "Reporting-Endpoints",
                 "attack": "",
-                "evidence": "1749908243",
-                "otherinfo": "1749908243, which evaluates to: 2025-06-14 13:37:23."
+                "evidence": "1749993646",
+                "otherinfo": "1749993646, which evaluates to: 2025-06-15 13:20:46."
               },
               {
-                "id": "47",
-                "uri": "https://preview.owasp-juice.shop",
-                "method": "GET",
-                "param": "Reporting-Endpoints",
-                "attack": "",
-                "evidence": "1749908244",
-                "otherinfo": "1749908244, which evaluates to: 2025-06-14 13:37:24."
-              },
-              {
-                "id": "22",
+                "id": "5",
                 "uri": "https://preview.owasp-juice.shop/assets/public/favicon_js.ico",
                 "method": "GET",
                 "param": "Reporting-Endpoints",
                 "attack": "",
-                "evidence": "1749908244",
-                "otherinfo": "1749908244, which evaluates to: 2025-06-14 13:37:24."
+                "evidence": "1749993646",
+                "otherinfo": "1749993646, which evaluates to: 2025-06-15 13:20:46."
               },
               {
-                "id": "31",
-                "uri": "https://preview.owasp-juice.shop/polyfills.js",
-                "method": "GET",
-                "param": "Reporting-Endpoints",
-                "attack": "",
-                "evidence": "1749908245",
-                "otherinfo": "1749908245, which evaluates to: 2025-06-14 13:37:25."
-              },
-              {
-                "id": "3",
+                "id": "6",
                 "uri": "https://preview.owasp-juice.shop/robots.txt",
                 "method": "GET",
                 "param": "Reporting-Endpoints",
                 "attack": "",
-                "evidence": "1749908243",
-                "otherinfo": "1749908243, which evaluates to: 2025-06-14 13:37:23."
+                "evidence": "1749993646",
+                "otherinfo": "1749993646, which evaluates to: 2025-06-15 13:20:46."
               },
               {
-                "id": "26",
+                "id": "11",
                 "uri": "https://preview.owasp-juice.shop/runtime.js",
                 "method": "GET",
                 "param": "Reporting-Endpoints",
                 "attack": "",
-                "evidence": "1749908245",
-                "otherinfo": "1749908245, which evaluates to: 2025-06-14 13:37:25."
+                "evidence": "1749993647",
+                "otherinfo": "1749993647, which evaluates to: 2025-06-15 13:20:47."
               },
               {
-                "id": "51",
+                "id": "42",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23728,7 +24416,7 @@
                 "otherinfo": "1650485437, which evaluates to: 2022-04-20 20:10:37."
               },
               {
-                "id": "55",
+                "id": "44",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23737,7 +24425,7 @@
                 "otherinfo": "1981395349, which evaluates to: 2032-10-14 19:35:49."
               },
               {
-                "id": "53",
+                "id": "43",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23746,22 +24434,22 @@
                 "otherinfo": "2038834951, which evaluates to: 2034-08-10 15:02:31."
               },
               {
-                "id": "49",
+                "id": "37",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "Reporting-Endpoints",
                 "attack": "",
-                "evidence": "1749908244",
-                "otherinfo": "1749908244, which evaluates to: 2025-06-14 13:37:24."
+                "evidence": "1749993646",
+                "otherinfo": "1749993646, which evaluates to: 2025-06-15 13:20:46."
               }
             ],
-            "count": "13",
+            "count": "11",
             "solution": "<p>Manually confirm that the timestamp data is not sensitive, and that the data cannot be aggregated to disclose exploitable patterns.</p>",
             "otherinfo": "<p>1650485437, which evaluates to: 2022-04-20 20:10:37.</p>",
             "reference": "<p>https://cwe.mitre.org/data/definitions/200.html</p>",
             "cweid": "497",
             "wascid": "13",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10027",
@@ -23774,7 +24462,7 @@
             "desc": "<p>The response appears to contain suspicious comments which may help an attacker.</p>",
             "instances": [
               {
-                "id": "68",
+                "id": "67",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -23783,7 +24471,7 @@
                 "otherinfo": "The following pattern was used: \\bQUERY\\b and was detected in likely comment: \"//owasp.org' target='_blank'>Open Worldwide Application Security Project (OWASP)</a> and is developed and maintained by voluntee\", see evidence field for the suspicious comment/snippet."
               },
               {
-                "id": "74",
+                "id": "73",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -23798,7 +24486,7 @@
             "reference": "",
             "cweid": "615",
             "wascid": "13",
-            "sourceid": "22"
+            "sourceid": "21"
           },
           {
             "pluginid": "10109",
@@ -23811,7 +24499,7 @@
             "desc": "<p>The application appears to be a modern web application. If you need to explore it automatically then the Ajax Spider may well be more effective than the standard one.</p>",
             "instances": [
               {
-                "id": "10",
+                "id": "29",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -23829,7 +24517,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "125",
+                "id": "119",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:43:13",
                 "method": "GET",
                 "param": "",
@@ -23838,7 +24526,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "117",
+                "id": "115",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
                 "param": "",
@@ -23847,7 +24535,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "129",
+                "id": "127",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:286:9",
                 "method": "GET",
                 "param": "",
@@ -23856,7 +24544,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "127",
+                "id": "126",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:328:13",
                 "method": "GET",
                 "param": "",
@@ -23865,7 +24553,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "119",
+                "id": "125",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:365:14",
                 "method": "GET",
                 "param": "",
@@ -23874,7 +24562,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "128",
+                "id": "129",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:376:14",
                 "method": "GET",
                 "param": "",
@@ -23883,7 +24571,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "130",
+                "id": "128",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:421:3",
                 "method": "GET",
                 "param": "",
@@ -23892,7 +24580,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "126",
+                "id": "124",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/layer.js:95:5",
                 "method": "GET",
                 "param": "",
@@ -23901,7 +24589,7 @@
                 "otherinfo": "No links have been found while there are scripts, which is an indication that this is a modern web application."
               },
               {
-                "id": "45",
+                "id": "31",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -23916,7 +24604,7 @@
             "reference": "",
             "cweid": "-1",
             "wascid": "-1",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10049",
@@ -23929,7 +24617,7 @@
             "desc": "<p>The response contents are not storable by caching components such as proxy servers. If the response does not contain sensitive, personal or user-specific information, it may benefit from being stored and cached, to improve performance.</p>",
             "instances": [
               {
-                "id": "84",
+                "id": "89",
                 "uri": "https://preview.owasp-juice.shop/ftp/coupons_2013.md.bak",
                 "method": "GET",
                 "param": "",
@@ -23957,7 +24645,7 @@
             "desc": "<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>",
             "instances": [
               {
-                "id": "5",
+                "id": "14",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "cache-control",
@@ -23966,7 +24654,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "106",
+                "id": "104",
                 "uri": "https://preview.owasp-juice.shop/",
                 "method": "GET",
                 "param": "cache-control",
@@ -23975,7 +24663,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "124",
+                "id": "112",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:43:13",
                 "method": "GET",
                 "param": "cache-control",
@@ -23984,7 +24672,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "105",
+                "id": "108",
                 "uri": "https://preview.owasp-juice.shop/app/build/routes/fileServer.js:59:18",
                 "method": "GET",
                 "param": "cache-control",
@@ -23993,7 +24681,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "113",
+                "id": "123",
                 "uri": "https://preview.owasp-juice.shop/app/node_modules/express/lib/router/index.js:365:14",
                 "method": "GET",
                 "param": "cache-control",
@@ -24002,7 +24690,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "85",
+                "id": "78",
                 "uri": "https://preview.owasp-juice.shop/ftp",
                 "method": "GET",
                 "param": "cache-control",
@@ -24011,7 +24699,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "82",
+                "id": "92",
                 "uri": "https://preview.owasp-juice.shop/ftp/acquisitions.md",
                 "method": "GET",
                 "param": "cache-control",
@@ -24020,7 +24708,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "118",
+                "id": "122",
                 "uri": "https://preview.owasp-juice.shop/ftp/announcement_encrypted.md",
                 "method": "GET",
                 "param": "cache-control",
@@ -24029,7 +24717,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "99",
+                "id": "102",
                 "uri": "https://preview.owasp-juice.shop/ftp/legal.md",
                 "method": "GET",
                 "param": "cache-control",
@@ -24038,16 +24726,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "0",
-                "uri": "https://preview.owasp-juice.shop/robots.txt",
-                "method": "GET",
-                "param": "cache-control",
-                "attack": "",
-                "evidence": "",
-                "otherinfo": ""
-              },
-              {
-                "id": "33",
+                "id": "15",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "cache-control",
@@ -24056,13 +24735,13 @@
                 "otherinfo": ""
               }
             ],
-            "count": "11",
+            "count": "10",
             "solution": "<p>For secure content, ensure the cache-control HTTP header is set with \"no-cache, no-store, must-revalidate\". If an asset should be cached consider setting the directives \"public, max-age, immutable\".</p>",
             "otherinfo": "",
             "reference": "<p>https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</p><p>https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</p><p>https://grayduck.mn/2021/09/13/cache-control-recommendations/</p>",
             "cweid": "525",
             "wascid": "13",
-            "sourceid": "1"
+            "sourceid": "6"
           },
           {
             "pluginid": "10049",
@@ -24075,7 +24754,16 @@
             "desc": "<p>The response contents are storable by caching components such as proxy servers, and may be retrieved directly from the cache, rather than from the origin server by the caching servers, in response to similar requests from other users. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where \"shared\" caching servers such as \"proxy\" caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance.</p>",
             "instances": [
               {
-                "id": "4",
+                "id": "82",
+                "uri": "https://preview.owasp-juice.shop/ftp",
+                "method": "GET",
+                "param": "",
+                "attack": "",
+                "evidence": "",
+                "otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
+              },
+              {
+                "id": "8",
                 "uri": "https://preview.owasp-juice.shop/robots.txt",
                 "method": "GET",
                 "param": "",
@@ -24084,13 +24772,13 @@
                 "otherinfo": "In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234."
               }
             ],
-            "count": "1",
+            "count": "2",
             "solution": "<p>Validate that the response does not contain sensitive, personal or user-specific information. If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p><p>Cache-Control: no-cache, no-store, must-revalidate, private</p><p>Pragma: no-cache</p><p>Expires: 0</p><p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>",
             "otherinfo": "<p>In the absence of an explicitly specified caching lifetime directive in the response, a liberal lifetime heuristic of 1 year was assumed. This is permitted by rfc7234.</p>",
             "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
             "cweid": "524",
             "wascid": "13",
-            "sourceid": "6"
+            "sourceid": "24"
           },
           {
             "pluginid": "10049",
@@ -24103,7 +24791,7 @@
             "desc": "<p>The response contents are storable by caching components such as proxy servers, but will not be retrieved directly from the cache, without validating the request upstream, in response to similar requests from other users.</p>",
             "instances": [
               {
-                "id": "16",
+                "id": "52",
                 "uri": "https://preview.owasp-juice.shop",
                 "method": "GET",
                 "param": "",
@@ -24112,7 +24800,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "23",
+                "id": "7",
                 "uri": "https://preview.owasp-juice.shop/assets/public/favicon_js.ico",
                 "method": "GET",
                 "param": "",
@@ -24121,16 +24809,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "90",
-                "uri": "https://preview.owasp-juice.shop/ftp/acquisitions.md",
-                "method": "GET",
-                "param": "",
-                "attack": "",
-                "evidence": "max-age=0",
-                "otherinfo": ""
-              },
-              {
-                "id": "70",
+                "id": "69",
                 "uri": "https://preview.owasp-juice.shop/main.js",
                 "method": "GET",
                 "param": "",
@@ -24139,7 +24818,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "42",
+                "id": "62",
                 "uri": "https://preview.owasp-juice.shop/polyfills.js",
                 "method": "GET",
                 "param": "",
@@ -24148,7 +24827,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "27",
+                "id": "12",
                 "uri": "https://preview.owasp-juice.shop/runtime.js",
                 "method": "GET",
                 "param": "",
@@ -24157,7 +24836,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "60",
+                "id": "47",
                 "uri": "https://preview.owasp-juice.shop/sitemap.xml",
                 "method": "GET",
                 "param": "",
@@ -24166,7 +24845,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "66",
+                "id": "65",
                 "uri": "https://preview.owasp-juice.shop/styles.css",
                 "method": "GET",
                 "param": "",
@@ -24175,7 +24854,7 @@
                 "otherinfo": ""
               },
               {
-                "id": "76",
+                "id": "75",
                 "uri": "https://preview.owasp-juice.shop/vendor.js",
                 "method": "GET",
                 "param": "",
@@ -24184,7 +24863,7 @@
                 "otherinfo": ""
               }
             ],
-            "count": "9",
+            "count": "8",
             "solution": "",
             "otherinfo": "",
             "reference": "<p>https://datatracker.ietf.org/doc/html/rfc7234</p><p>https://datatracker.ietf.org/doc/html/rfc7231</p><p>https://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html</p>",
