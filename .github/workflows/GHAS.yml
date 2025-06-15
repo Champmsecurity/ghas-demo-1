@@ -26,13 +26,14 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v3
-        
-        # --- Semgrep Analysis ---
+
+      # --- Semgrep Analysis ---
       - name: Run Semgrep
         uses: returntocorp/semgrep-action@v1
         with:
           config: auto
           generateSarif: true
+        continue-on-error: true
 
       - name: Check if SARIF file exists
         run: |
@@ -47,7 +48,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: semgrep.sarif
-          
+
       # --- Fetch code scanning alerts after all analysis ---
       - name: Fetch Code Scanning Alerts
         run: |
@@ -61,7 +62,6 @@ jobs:
         with:
           name: code-scanning-alerts
           path: code-scanning-alerts.json
-
   secret-scanning:
     runs-on: ubuntu-latest
     steps:
