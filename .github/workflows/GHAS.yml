@@ -44,6 +44,7 @@ jobs:
         with:
           sarif_file: semgrep.sarif
 
+ # --- Fetch code scanninf Analysis ---
       - name: Fetch Code Scanning Alerts
         run: |
           curl -H "Authorization: token ${{secrets.PAT_TOKEN}}" \
@@ -132,11 +133,6 @@ jobs:
         with:
           name: code-scanning-alerts
 
-      - name: Download Semgrep Alerts
-        uses: actions/download-artifact@v4
-        with:
-          name: semgrep-alerts
-
       - name: Download Secret Scanning Alerts
         uses: actions/download-artifact@v4
         with:
@@ -156,11 +152,10 @@ jobs:
         run: |
           jq -n \
             --slurpfile code code-scanning-alerts.json \
-            --slurpfile semgrep semgrep.json \
             --slurpfile secret secret-scanning-alerts.json \
             --slurpfile dependabot dependabot-alerts.json \
             --slurpfile zap zap_report.json \
-            '{code_scanning: $code[0], semgrep: $semgrep[0], secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0]}' \
+            '{code_scanning: $code[0],secret_scanning: $secret[0], dependabot: $dependabot[0], zap: $zap[0]}' \
             > all-alerts.json
 
       - name: Upload Combined Alerts
